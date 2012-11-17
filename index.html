@@ -1100,7 +1100,7 @@ to :robot 'pickup' :block
 		the kids could sketch as well as display computer graphics.  John Shoch built a line drawing and 
 		gesture recognition system (based on Ledeen's [Newman and Sproull 72]) that was integrated with the
 		painting.  Bill Duvall of POLOS built a miniNLS that was quite remarkable in its speed and power.  The
-		first overlapping windows started to appear.  Bob Shur (with Steve Purcell's help) built a 2 1/2 D
+		first overlapping windows started to appear.  Bob Shur (with Steve Purcell's help) built a 2&frac12;D
 		animation system.  Along with Ben Laws' font editor, we could give quite a smashing demo of what we
 		intended to build for real over the next few years.  I remember giving one of these to a Xerox 
 		executive, including doing a portrait of him in the new painting system, and
@@ -1305,16 +1305,16 @@ to :robot 'pickup' :block
 		imply that classes are objects and that they must be 
 		instances of themself.  (6) implies a LISPlike universal syntax, but with the receiving object as the first
 		item followed by the
-		message.  Thus <code>c<sub>i</sub> &lt;- de</code> (with subscripting rendered as "o"
+		message.  Thus <code>c<sub>i</sub> &lt;- de</code> (with subscripting rendered as "&#9675;"
 		and multiplication as "*") means:
 		</p>
 		<table summary="receiver and message">
-			<tr><td><u>receiver</u></td><td><u>message</u></td></tr>
-			<tr><td><i>c</i></td><td><i> o i &lt;- d*e</i></td></tr>
+			<tr><td><u>receiver</u></td><td><u>| message</u></td></tr>
+			<tr><td><i>c</i></td><td><i>| &#9675; i &lt;- d*e</i></td></tr>
 		</table>
 		<p>
-		The c is bound to the receiving object, and <u>all</u> of <code>o i &lt;- d*e</code> is the message to it.  The message is made
-		up of literal token ".", an expression to be evaluated in the sender's context (in this case i), another
+		The c is bound to the receiving object, and <u>all</u> of <code>&#9675; i &lt;- d*e</code> is the message to it.  The message is made
+		up of literal token "&#9675;", an expression to be evaluated in the sender's context (in this case i), another
 		literal token &lt;-, followed by an expression to be evaluated in the sender's context (d*e).  Since "LISP"
 		pairs are made from 2 element objects they can be indexed more simply: <code>c hd</code>, <code>c tl</code>, and <code>c hd &lt;- foo</code>, etc.
 		</p>
@@ -1323,9 +1323,9 @@ to :robot 'pickup' :block
 		to think of them as:
 		</p>
 		<table summary="receiver and message">
-			<tr><td><u>receiver</u></td><td><u>message</u></td></tr>
-			<tr><td><i>a</i></td><td><i>+ b</i></td></tr>
-			<tr><td><i>3</i></td><td><i>+ 4</i></td></tr>
+			<tr><td><u>receiver</u></td><td><u>| message</u></td></tr>
+			<tr><td><i>a</i></td><td><i>| + b</i></td></tr>
+			<tr><td><i>3</i></td><td><i>| + 4</i></td></tr>
 		</table>
 		<p>
 		It seemed silly if only integers were considered, but there are many other metaphoric readings of
@@ -1357,7 +1357,7 @@ to :robot 'pickup' :block
 		<p>
 		or "intensionally," as part of class integer:
 		</p>
-			<p><i>(... o! * (^:n=1) * (1) (n-1)!)</i></p>
+			<p><i>(... &#9675;! &raquo; (^:n=1) &raquo; (1) (n-1)!)</i></p>
 		<p>
 		Of course, the whole idea of Smalltalk (and OOP in general) is to define everything <i>intensionally</i>.
 		And this was the direction of movement as we learned how to program in the new style.  I never
@@ -1377,15 +1377,15 @@ to :robot 'pickup' :block
 <pre>
 Pair :h :t
     hd &lt;- :h
-	hd              = h
+	hd              &raquo; h
 	tl &lt;- :t
-	tl              = t
-	isPair          = true
-	print           =  '( print. SELF mprint.
-	mprint          = h print. if t isNil then ') print
-                        else if t isPair then t mprint
-                        else '* print. t print. ') print
-	length          = 1 + if t isList then t length else 0
+	tl              &raquo; t
+	isPair          &raquo; true
+	print           &raquo; '( print. SELF mprint.
+	mprint          &raquo; h print. if t isNil then ') print
+                               else if t isPair then t mprint
+                               else '* print. t print. ') print
+	length          &raquo; 1 + if t isList then t length else 0
 </pre>
 </div>
 		
@@ -1410,18 +1410,18 @@ Pair :h :t
 		keyboard and create a string of text.  Diana built an early
 		version of a bit field block transfer (bitblt) for displaying
 		variable pitch fonts and generally writing on the display.
-		The first window versions were done as real 2 1/2 D draggable
+		The first window versions were done as real 2&frac12;D draggable
 		objects that were just a little too slow to be useful.
 		We decided to wait until Steve Purcell got his animation
 		system going to do it right, and opted for the style that is
-		still in use today, which is more like "2 1/4 D".  Windows
+		still in use today, which is more like "2&frac14;D".  Windows
 		were perhaps the most redesigned and reimplemented class in Smalltalk because we didn't quite have enough
 		compute power to just do the continual viewing to
 		"world coordinates" and refereshing that my former Utah
 		colleagues were starting to experiment with on the flight
 		simulator projects at Evans &amp; Sutherland.  This is a simple,
 		powerful model but it is difficult to do in real-time
-		even in 2 1/2D.  The first practical windows in Smalltalk
+		even in 2&frac12;D.  The first practical windows in Smalltalk
 		used the GRAIL conventions of sensitive corners for moving,
 		resizing, cloning, and closing.  Window scheduling
 		used a simple "loopless" control scheme that threaded all
@@ -1526,7 +1526,7 @@ Pair :h :t
 		ones.  This task was put into the ingenious hands of
 		Steve Purcell.  By the fall of '73 he could demo 80 
 		ping-pong balls and 10 flying horses running at 10 frames 
-		per second in 2 1/2D.  His next task was to make
+		per second in 2&frac12;D.  His next task was to make
 		the demo into a general systems facility from which
 		we could construct animation systems.  His CHAOS
 		system started working in May '74, just in time for summer
@@ -1577,8 +1577,8 @@ Pair :h :t
 <pre class="rightcolumn">
 (until Return or Delete do
     ('character &lt;- display &lt;- keyboard.
-    character = ret > (Return)
-    character = del > (Delete)
+    character = ret &raquo; (Return)
+    character = del &raquo; (Delete)
     )
 then case
     Return: ('deal with this normal exit')
@@ -1754,11 +1754,11 @@ then case
 		like&mdash;they could come surprisingly close&mdash;they would be shown:
 		</p>
 		<pre style="font-size:10px; color:#000;"><i>to box | x y size tilt
-(odraw   =    (@place x y turn tilt. square size.
-oundraw  =    (@ white, SELF draw, @black)
-oturn    =    (SELF undraw. 'tilt &lt;- tilt + :. SELF draw)
-ogrow    =    (SELF undraw. 'size &lt;- size + :. SELF draw)
-ISNEW    =    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
+(&#9675;draw   &raquo;    (@place x y turn tilt. square size.
+&#9675;undraw  &raquo;    (@ white. SELF draw. @black)
+&#9675;turn    &raquo;    (SELF undraw. 'tilt &lt;- tilt + :. SELF draw)
+&#9675;grow    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)
+ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<p>
 		What was so wonderful about this idea were the myriad
 		of children's projects that could spring off the humble
@@ -2361,7 +2361,7 @@ ISNEW    =    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		two day seminar on software, with a special emphasis on
 		complexity and what could be done about it.  LRG got asked
 		to give them a hands-on experience in end-user programming
-		so "they could do 'something real' over two 1 1/2 hour
+		so "they could do 'something real' over two 1&frac12; hour
 		sessions."  We immediately decided <u>not</u> to teach them
 		Smalltalk-76 (my "burn our disk packs" point in spades),
 		but to create in two months in Smalltalk-76 a rich system
