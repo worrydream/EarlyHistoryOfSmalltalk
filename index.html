@@ -345,7 +345,7 @@
 		The second barely-seeing of the idea came just a little later when ATC decided to replace the 220
 		with a B5000.  I didn't have the perspective to really appreciate it at the time, but I did take note of its
 		segmented storage system, its efficiency of HLL compilation and byte-coded execution, its automatic
-		mechanisms for subroutine calling and multiprocess switching, its pure code for sharing, its protected
+		mechanisms for subroutine calling and multiprocess switching, its pure code for sharing, its protection
 		mechanisms, etc.  And, I saw that the access to its Program Reference Table corresponded to the
 		220 file system scheme of providing a procedural interface to a module.  However, my big hit from
 		this machine at this time was not the OOP idea, but some insights into HLL translation and evaluation.
@@ -444,7 +444,7 @@
 
 		<p>
 		Dave Evans was not a great believer in graduate school
-		as an institution.  As with many of the ARPA "contracts"
+		as an institution.  As with many of the ARPA "contractors"
 		he wanted his students to be doing "real things"; they
 		should move through graduate school as quickly as possible;
 		and their theses should advance the state of the art.
@@ -470,7 +470,7 @@
 		</p>
 		<p>
 		But EULER was enough of "an almost new thing" to suggest that the same techniques be applied to
-		simply Simula.  The EULER compiler was a part of its formal definition and made a simple conversion
+		simplify Simula.  The EULER compiler was a part of its formal definition and made a simple conversion
 		into 85000-like byte-codes.  This was appealing because it s suggested that Ed's little machine could
 		run byte-codes emulated in the longish slow microcode that was then possible.  The EULER compiler
 		however, was tortuously rendered in an "extended precedence" grammar that actually required
@@ -574,11 +574,11 @@
 		contained two pointers: the first to the "master" of the object, and the second to the object instances (later
 		we realized that we should put the master pointer in the instance to save space).  A different method
 		was taken for handling generalized assignment.  The B5000 used l-values and r-values [Strachey*]
-		which worked for some cases but couldn't handle more complex objects.  For example: <i>a[55] := 0</i> if <i>a</i> was a 
+		which worked for some cases but couldn't handle more complex objects.  For example: <i>a[55] := 0</i>, if <i>a</i> was a 
 		sparse array whose default element was 0 would still generate an element in the array because
 		:= is an "operator" and <i>a[55]</i> is dereferenced into an l-value before anyone gets to see that the r-value
 		is the default element, regardless of whether <i>a</i> is an array or a procedure fronting for an array.  What
-		is needed is something like: <i>a(55 := 0),</i> which <u>can</u> look at all relevant operands before any store is
+		is needed is something like: <i>a(55, ':=', 0),</i> which <u>can</u> look at all relevant operands before any store is
 		made.  In other words, := is not an operator, but a kind of index that can select a behavior from a
 		complex object.  It took me a remarkably long time to see this, partly I think because one has to invert
 		the traditional notion of operators and functions, etc., to see that objects need to privately own all of
@@ -626,7 +626,7 @@
 		enough to be feasible on the machine.  I was writing the first compiler when something unusual
 		happened: the Utah graduate students got invited to the ARPA contractors meeting held that year at Alta,
 		Utah. Towards the end of the three days, Bob Taylor, who had succeeded Ivan Sutherland as head of
-		ARPA-IPTO asked the graduate students (sitting in a ring around the outside of the 20 or so contractors)
+		ARPA-IPTO, asked the graduate students (sitting in a ring around the outside of the 20 or so contractors)
 		if they had any comments.  John Warnock raised his hand and pointed out that since the ARPA
 		grad students would all soon be colleagues (and since we did all the real work anyway), ARPA should
 		have a contractors-type meeting each year for the grad students.  Taylor thought this was a great idea
@@ -764,7 +764,7 @@
 		</p>
 		<p>
 		That fall, I heard a wonderful talk by Butler Lampson about CAL-TSS, a capability-based operating
-		system that seemed very "object-oriented" [Lampson 69].  Unforgeable pointers (ala 85000) were
+		system that seemed very "object-oriented" [Lampson 69].  Unforgeable pointers (ala B5000) were
 		extended by bit-masks that restricted access to the object's internal operations.  This confirmed my
 		"objects as server" metaphor.  There was also a very nice approach to exception handling which
 		reminded me of the way failure was often handled in pattern matching systems.  The only problem&mdash;
@@ -779,7 +779,7 @@
 		around enough to get some honest barnacles, but worse, there were deep flaws in its logical 
 		foundations.  By this, I mean that the pure language was supposed to be based on functions, but its most
 		important components&mdash;such as lambda expressions, quotes, and conds&mdash;were not functions at all,
-		and instead were called special forms.  Landin and others had been able to get quotes and cons in
+		and instead were called special forms.  Landin and others had been able to get quotes and conds in
 		terms of lambda by tricks that were variously clever and useful, but the flaw remained in the jewel.  
 		In the practical language things were better.  There were not just EXPRs (which evaluated their 
 		arguments), but FEXPRs (which did not).  My next question was, why on earth call it a functional language?
@@ -805,7 +805,7 @@
 		new version  of the KiddiKomp that could be made in enough quantity to do experiments leading to
 		the user interface design for the eventual notebook.  Bob Barton liked to say that "good ideas don't
 		often scale."  He was certainly right when applied to the FLEX machine.  The B5000 just didn't directly
-		scale down into a tiny machine.  Only the byte-codes did.  and even these needed modification.  I
+		scale down into a tiny machine.  Only the byte-codes did, and even these needed modification.  I
 		decided to take another look at Wes Clark's LINC, and was ready to appreciate it much more this time
 		[Clark 1965].
 		</p>
@@ -827,7 +827,7 @@
 		<p>
 		Right after New Years 1971, Bob Taylor scored an enormous coup by attracting most of the 
 		struggling Berkeley Computer Corp to PARC.  This group included Butler Lampson, Check Thacker, Peter
-		Deutsch, Jim Mitchell, Dick Shoup, Willie Sue Haugeland, and Ed Fiala.  Him Mitchell urged the group
+		Deutsch, Jim Mitchell, Dick Shoup, Willie Sue Haugeland, and Ed Fiala.  Jim Mitchell urged the group
 		to hire Ed McCreight from CM and he arrived soon after.  Gary Starkweather was there already,
 		having been thrown out of the Xerox Rochester Labs for wanting to build a laser printer (which was
 		against the local religion).  Not long after, many of Doug Englebart's people joined up&mdash;part of the
@@ -859,9 +859,9 @@
 		the statement of the problem in Landin's LISP syntax&mdash;and also the first part of the solution.  Then a 
 		few seconds later:
 		</p>
-		<pre>where odds(x) = if null(x) v null(tl(x)) then x
+		<pre>where odds(x) = if null(x) &or; null(tl(x)) then x
                    else hd(x) &amp; odds(ttl(x))
-     evens(x) = if null(x) v null(tl(x)) then nil
+     evens(x) = if null(x) &or; null(tl(x)) then nil
                    else odds(tl(x))</pre>
 		<p>
 		This characteristic of writing down many solutions in declarative form and have them also be the
@@ -983,7 +983,7 @@ to :robot 'pickup' :block
 		<p>
 		An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the syntheses of
 		control structures.  ALGOL60 required a separate link for dynamic subroutine linking and for access to
-		static global state.  Fisher showed ow a generalization of these links could be used to simulate a
+		static global state.  Fisher showed how a generalization of these links could be used to simulate a
 		wide variety of control environments.  One of the ways to solve the "funarg problem" of LiSP is to
 		associate the proper global state link with expressions and functions that are to be evaluated later so
 		that the free variables referenced are the ones that were actually implied by the static form of the
@@ -1205,7 +1205,7 @@ to :robot 'pickup' :block
 		just do it and it's done."
 		</p>
 		<p>
-		It evaluated <i>3+4</i> <u>v e r y  s l o w l y</u> (it was "glacial", as Butler liked to say) but the answer always
+		It evaluated <i>3+4</i> <u>v&nbsp;e&nbsp;r&nbsp;y&nbsp; s&nbsp;l&nbsp;o&nbsp;w&nbsp;l&nbsp;y</u> (it was "glacial", as Butler liked to say) but the answer always
 		came out 7.  Well, there was nothing to do but keep going.  Dan loved to bootstrap on a system that
 		"always ran," and over the next ten years he made at least 80 major releases of various flavors of
 		Smalltalk.
@@ -1221,7 +1221,7 @@ to :robot 'pickup' :block
 		Just before Chuck started work on the machine I gave a paper to the National Council of Teachers
 		of English [Kay 72c] on the Dynabook and its potential as a learning and thinking amplifier&mdash;the
 		paper was an extensive rotogravure of "20 things to do with a Dynabook" [Kay 72c].  By the time I got
-		back from Minnesota, Stewart Brand's Rolling Stone article about PARC [Brand 1972] and the surrounding
+		back from Minnesota, Stewart Brand's <i>Rolling Stone</i> article about PARC [Brand 1972] and the surrounding
 		hacker community had hit the stands.  To our enormous surprise it caused a major furor at Xerox
 		headquarters in Stamford, Connecticut.  Though it was a wonderful article that really caught the 
 		spirit of the whole culture, Xerox went berserk, forced us to wear badges (over the years many were
@@ -1249,7 +1249,7 @@ to :robot 'pickup' :block
 		fetch from next.  The machine never had to wait, and the result was that most hardware functions
 		(particularly those that involved i/o (like feeding the display and handling the disk) could be
 		replaced by microcode.  Even the refresh of the MOS dynamic RAM was done by a task.  In other
-		words, this was a coroutine architecture.  Check claimed that he got the idea from a lecture I had
+		words, this was a coroutine architecture.  Chuck claimed that he got the idea from a lecture I had
 		given on coroutines a few months before, but I remembered that Wes Clark's TX-2 (the Sketchpad
 		machine) had used the idea first, and I 
 		probably mentioned that in the talk.
@@ -1258,7 +1258,7 @@ to :robot 'pickup' :block
 		In early April, just a little over three
 		months from the start, the first Interim Dynabook, known as 'Bilbo,' greeted the
 		world and we had the first bit-map picture
-		on the screen within minutes; the Muppets' Cookie Monster that I had
+		on the screen within minutes: the Muppets' Cookie Monster that I had
 		sketched on our painting system.
 		</p>
 		<p>
@@ -1269,7 +1269,7 @@ to :robot 'pickup' :block
 		allocation of credits and the various 
 		priorities associated with them.  My $230K
 		was enough to get 15 of the original
-		projected 30 machines (over the years some 2000 Interim Dynabooks were actually built.  True to
+		projected 30 machines (over the years some 2000 Interim Dynabooks were actually built).  True to
 		Schopenhauer's observation, Executive "X" now decided that the Interim Dynabook was a <u>good</u> idea
 		and he wanted <u>all but two</u> for his lab (I was in the other lab).  I had to go to considerable lengths to
 		get our machines back, but finally succeeded.
@@ -1297,14 +1297,13 @@ to :robot 'pickup' :block
 		out into six main ideas that were in accord with the initial
 		premises in designing the interpreter.  The first three principles
 		are what objects "are about"&mdash;how they are seen and
-		used
-		from "the outside."  These did not require any modification
-		over the years.  The last three &mdash;objects from the
+		used from "the outside."  These did not require any modification
+		over the years.  The last three&mdash;objects from the
 		inside&mdash;were tinkered with in every version of Smalltalk
 		(and in subsequent OOP designs).  In this scheme (1 &amp; 4)
 		imply that classes are objects and that they must be 
-		instances of themself.  (6) implies a LISPlike universal syntax, but with the receiving object as the first
-		item followed by the
+		instances of themself.  (6) implies a LISPlike universal syntax,
+		but with the receiving object as the first item followed by the
 		message.  Thus <code>c<sub>i</sub> &lt;- de</code> (with subscripting rendered as "&#9675;"
 		and multiplication as "*") means:
 		</p>
@@ -1626,7 +1625,7 @@ then case
 		The basic idea in all of these systems is to be able to gather the most comprehensive possible
 		working set of objects.  This is most easily accomplished by swapping individual objects.  Now the problem
 		becomes the overhead of purging non-working set objects to make room for the ones that are needed.
-		(Paging sometimes works better for this part because you can get more than on object (OOZE) in 
+		(Paging sometimes works better for this part because you can get more than one object (OOZE) in
 		each disk touch.)  Two ideas help a lot.  First, Butler's insight in the GENIE OS that it was worthwhile to
 		expend a small percentage of time purging dirty objects to make core as clean as possible
 		[Lampson 1966].  Thus crashes tend not to hurt as much and there is always clean storage to fetch
@@ -1776,8 +1775,8 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		into the future as strongly as we hoped.  The children
 		were chosen from the Palo Alto schools (hardly an average
 		background) and we tended to be much more excited
-		about the successes than the difficulties.  In part, that we
-		were seeing was the "hack phenomenon," that, for any
+		about the successes than the difficulties.  In part, what we
+		were seeing was the "hacker phenomenon," that, for any
 		given pursuit, a particular 5% of the population will jump 
 		into it naturally, while the 80% or so who can learn
 		it in time do not find it at all natural.
@@ -1820,11 +1819,11 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<i>literature</i> that renders <i>ideas.</i>  Language is used to read and
 		write about them, but at some point the organization of
 		ideas starts to dominate mere language abilities.  And it
-		help greatly to have some powerful ideas under one's
+		helps greatly to have some powerful ideas under one's
 		belt to better acquire more powerful ideas [Papert 70s].
 		So, we decided we should teach <i>design</i>.  And Adele came
 		up with another brilliant stroke to deal with this.  She
-		decided that what was needed was in intermediary
+		decided that what was needed was an intermediary
 		between the vague ideas about the problem and the very
 		detailed writing and debugging that had to be done to
 		get it to run in Smalltalk.  She called the intermediary
@@ -2191,7 +2190,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		The two major centers of ideas were Lincoln Labs and RAND corp&mdash;both ARPA funded.  The big shift
 		that consolidated these ideas into a powerful theory and long-lived examples came because the LRG
 		focus was on children.  Hence, we were thinking about learning as being one of the main effects we
-		wanted to have happen.  Early on, this led to a 90 degree rotation of the purposed of the user interface
+		wanted to have happen.  Early on, this led to a 90 degree rotation of the purpose of the user interface
 		from "access to functionality" to "environment in which users learn by doing."  This new stance
 		could now respond to the echoes of Montessori and Dewey, particularly the former, and got me, on
 		rereading Jerome Bruner, to think beyond the children's curriculum to a "curriculum of the user
@@ -2510,7 +2509,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
 		<p>
 		By now it was already 1979, and we found ourselves doing one of our many demos, but this time for a very
-		interested audience: Steve Jobs, Jef Raskin, and other
+		interested audience: Steve Jobs, Jeff Raskin, and other
 		technical people from Apple.  They had started a project called
 		<i>Lisa</i> but weren't quite sure what it should be like, until Jeff
 		said to Steve, "You should really come over to PARC and see
