@@ -851,7 +851,7 @@
 		of hierarchical thinking and was challenged to prove it.  He was given a programming problem to solve
 		while the protocol was collected.  The problem was: given a list of items, produce a list consisting of
 		all of the odd indexed items followed by all of the even indexed items.  Newell's internal programming
-		language resemble IPL-V in which pointers are manipulated explicitly, and he got into quite a
+		language resembled IPL-V in which pointers are manipulated explicitly, and he got into quite a
 		struggle to do the program.  In 2 seconds I wrote down:
 		</p>
 		<pre>oddsEvens(x) = append(odds(x), evens(x))</pre>
@@ -981,10 +981,10 @@ to :robot 'pickup' :block
 		in particular <i>when</i> and in <i>what environment</i> did expressions get evaluated?
 		</p>
 		<p>
-		An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the syntheses of
+		An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the synthesis of
 		control structures.  ALGOL60 required a separate link for dynamic subroutine linking and for access to
 		static global state.  Fisher showed how a generalization of these links could be used to simulate a
-		wide variety of control environments.  One of the ways to solve the "funarg problem" of LiSP is to
+		wide variety of control environments.  One of the ways to solve the "funarg problem" of LISP is to
 		associate the proper global state link with expressions and functions that are to be evaluated later so
 		that the free variables referenced are the ones that were actually implied by the static form of the
 		language.  The notion of "lazy evaluation" is anticipated here as well.
@@ -1190,7 +1190,7 @@ to :robot 'pickup' :block
 		The first few versions had flaws that were soundly criticized by the group.  But by morning 8 or so,
 		a version appeared that seemed to work (see Appendix III for a sketch of how the interpreter was
 		designed).  The major differences from the official Smalltalk-72 of a little bit later were that in the first
-		version symbols were byte-coded and the receiving of return of return-values from a send was symmetric&mdash;i.e.
+		version symbols were byte-coded and the receiving of return-values from a send was symmetric&mdash;i.e.
 		receipt could be like parameter binding&mdash;this was particular useful for the return of multiple values.
 		For various reasons, this was abandoned in favor of a more expression-oriented functional
 		return style.
@@ -1263,7 +1263,7 @@ to :robot 'pickup' :block
 		</p>
 		<p>
 		Soon Dan had bootstrapped Smalltalk across, and for many months it was the sole software system to run on the
-		Interim dynabook.  Appendix I has an 
+		Interim Dynabook.  Appendix I has an 
 		"acknowledgements" document I wrote
 		from this time that is interesting it its
 		allocation of credits and the various 
@@ -2511,7 +2511,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		By now it was already 1979, and we found ourselves doing one of our many demos, but this time for a very
 		interested audience: Steve Jobs, Jef Raskin, and other
 		technical people from Apple.  They had started a project called
-		<i>Lisa</i> but weren't quite sure what it should be like, until Jeff
+		<i>Lisa</i> but weren't quite sure what it should be like, until Jef
 		said to Steve, "You should really come over to PARC and see
 		what they are doing."  Thus, more than eight years after
 		overlapping windows had been invented and more than
