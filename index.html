@@ -3,58 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>The Early History Of Smalltalk</title>
-  <style type="text/css">
-    body {
-    width:700px;
-    margin-left:auto;
-    margin-right:auto;
-    color:#444;
-    font: normal 14px/1.45 "Helvetica Neue", Arial, sans-serif;
-    }
-    h1 {
-    font-variant: small-caps;
-    margin-top:30px;
-    color:#000;
-    }
-    h2 {
-    font-family: Verdana;
-    margin-top:100px;
-    color:#000;
-    }
-    h3 {
-    color:#000;
-    margin-top:30px;
-    }
-    .copyright {
-    margin: 1em 4em 1em 4em;
-    font-size: small;
-    }
-    .toc {
-    margin: 1em 5em 1em 5em;
-    }
-    img {
-    margin-left: 10px;
-    margin-top:10px;
-    margin-bottom:10px;
-    }
-    .rightcolumn {
-    margin: 0.5em;
-    padding: 0.5em;
-    float: right;
-    border: 1px solid #808080;
-    }
-    .dedicate {
-    margin-left: 70%;
-    }
-    div.rightcolumn {
-    width: 30%;
-    }
-    .pendery {
-    border: 1px solid #808080;
-    padding: 1em;
-    margin: 1em 4em 1em 4em;
-    }
-  </style>
+  <link rel="stylesheet" href="css/default.css" charset="utf-8">
 </head>
 <body>
 	<p align="center"><a href="https://raw.githubusercontent.com/worrydream/EarlyHistoryOfSmalltalk/master/SmalltalkHistoryHOPL-scanned-2015-07-16.pdf">original pdf</a> / <a href="https://github.com/worrydream/EarlyHistoryOfSmalltalk">make corrections</a></p>
@@ -82,10 +31,10 @@
 		<p>
 		Most ideas come from previous ideas.  The sixties, particularly in the ARPA
 		community, gave rise to a host of notions about "human-computer symbiosis"
-		through interactive time-shared computers, graphics screens and pointing 
+		through interactive time-shared computers, graphics screens and pointing
 		devices. Advanced computer languages were invented to simulate complex systems
 		such as oil refineries and semi-intelligent behavior.  The soon-to-follow paradigm
-		shift of modern personal computing, overlapping window interfaces, and 
+		shift of modern personal computing, overlapping window interfaces, and
 		object-oriented design came from seeing the work of the sixties as something
 		more than a "better old thing."  This is, more than a better way: to do mainframe
 		computing; for end-users to invoke functionality; to make data structures more
@@ -95,7 +44,7 @@
 		handheld "Dynabook" in a way that would not be possible on a shared mainframe;
 		millions of potential users meant that the user interface would have to
 		become a learning environment along the lines of Montessori and Bruner; and
-		needs for large scope, reduction in complexity, and end-user literacy would 
+		needs for large scope, reduction in complexity, and end-user literacy would
 		require that data and control structures be done away with in favor of a more
 		biological scheme of protected universal cells interacting only through messages
 		that could mimic any desired behavior.
@@ -105,10 +54,10 @@
 		as parented by its many predecessors in hardware, language and user interface
 		design.  It became the exemplar of the new computing, in part, because we were
 		actually trying for a qualitative shift in belief structures&mdash;a new Kuhnian paradigm
-		in the same spirit as the invention of the printing press&mdash;and thus took 
+		in the same spirit as the invention of the printing press&mdash;and thus took
 		highly extreme positions which almost forced these new styles to be invented.
 		</p>
-	
+
 	<h2 align="center">Table of Contents</h2>
 
           <ul>
@@ -208,21 +157,21 @@
 		to claim priority."
 		</p>
 		<p>
-		I will try to show where most of the influences came from and how they were transformed 
-		in the magnetic field formed by the new personal computing metaphor.  It was the <i>attitudes</i> as 
+		I will try to show where most of the influences came from and how they were transformed
+		in the magnetic field formed by the new personal computing metaphor.  It was the <i>attitudes</i> as
 		well as the great ideas of the pioneers that helped Smalltalk get invented.  Many of the people I
 		admired most at this time&mdash;such as Ivan Sutherland, Marvin Minsky, Seymour Papert, Gordon
 		Moore, Bob Barton, Dave Evans, Butler Lampson, Jerome Bruner, and others&mdash;seemed to have
 		a splendid sense that their creations, though wonderful by relative standards, were not near to
 		the absolute thresholds that had to be crossed.  Small minds try to form religions, the great ones
-		just want better routes up the mountain.  Where Newton said he saw further by standing on the 
+		just want better routes up the mountain.  Where Newton said he saw further by standing on the
 		shoulders of giants, computer scientists all too often stand on each other's toes.  Myopia is
 		still a problem where there are giants' shoulders to stand on&mdash;"outsight" is better than
-		insight&mdash;but it can be minimized by using glasses whose lenses are highly sensitive to 
+		insight&mdash;but it can be minimized by using glasses whose lenses are highly sensitive to
 		esthetics and criticism.
 		</p>
 		<p>
-		Programming languages can be categorized in a number of ways: imperative, applicative, 
+		Programming languages can be categorized in a number of ways: imperative, applicative,
 		logic-based, problem-oriented, etc.  But they all seem to be either an "agglutination of features"
 		or a "crystallization of style."  COBOL, PL/1, Ada, etc., belong to the first kind; LISP, APL&mdash;
 		and Smalltalk&mdash;are the second kind.  It is probably not an accident that the agglutinative languages
@@ -269,7 +218,7 @@
 		<p>
 		In this history I will try to be true to Hamming's request as moderated by Hobbes' observation.  I
 		have had difficulty in previous attempts to write about Smalltalk because my emotional involvement
-		has always been centered on personal computing as an amplifier for human reach&mdash;rather than 
+		has always been centered on personal computing as an amplifier for human reach&mdash;rather than
 		programming system design&mdash;and we haven't got there yet.  Though I was the instigator and original
 		designer of Smalltalk, it has always belonged more to the people who make it work and got it out the
 		door, especially Dan Ingalls and Adele Goldberg.  Each of the LRGers contributed in deep and remarkable
@@ -288,7 +237,7 @@
 		</p>
 		<p>
 		This history is too long, but I was amazed at how many people and systems that had an influence
-		appear only as shadows or not at all.  I am sorry not to be able to say more about Bob Balzer, Bob 
+		appear only as shadows or not at all.  I am sorry not to be able to say more about Bob Balzer, Bob
 		Barton, Danny Bobrow, Steve Carr, Wes Clark, Barbara Deutsch, Peter Deutsch, Bill Duvall, Bob
 		Flegal, Laura Gould, Bruce Horn, Butler Lampson, Dave Liddle, William Newman, Bill Paxton,
 		Trygve Reenskaug, Dave Robson, Doug Ross, Paul Rovner, Bob Sproull, Dan Swinehart, Bert
@@ -325,7 +274,7 @@
 
 
 		<p>
-		True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air 
+		True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air
 		<a href="Images/b220.png" target="_blank"><img src="Images/thumbnails/b220.jpg" alt="b220 file format" align="right" style="max-width: 228px"></a>
 		Force.  The first was on the Burroughs 220 in the form of a style for
 		transporting files from one Air Training Command installation to
@@ -335,7 +284,7 @@
 		parts.  The third part was all of the actual data records of arbitrary
 		size and format.  The second part contained the B220 procedures
 		that knew how to get at records and fields to copy and update the
-		third part.  And the first part was an array or relative pointers 
+		third part.  And the first part was an array or relative pointers
 		into entry points of the procedures in the second part (the initial pointers
 		were in a standard order representing standard meanings).
 		Needless to say, this was a great idea, and was used in many subsequent systems until the enforced
@@ -354,12 +303,12 @@
 		<p>
 		After the Air Force, I worked my way through the rest of college by programming mostly retrieval
 		<a href="Images/mooreslaw.png" target="_blank"><img src="Images/thumbnails/mooreslaw.jpg" alt="Moore's Law graph" align="right" style="max-width: 222px"></a>
-		systems for large collections of weather data for the National 
+		systems for large collections of weather data for the National
 		Center for Atmospheric Research.  I got interested in simulation
 		in general&mdash;particularly of one machine by another&mdash;but aside
 		from doing a one-dimensional version of a bit-field block transfer
 		(bitblt) on a CDC 6600 to simulate word sizes of various
-		machines, most of my attention was distracted by school, or I 
+		machines, most of my attention was distracted by school, or I
 		should say the theatre at school.  While in Chippewa Falls helping
 		to debug the 6600, I read an article by Gordon Moore which
 		predicted that integrated silicon on chips was going to exponentially
@@ -368,9 +317,9 @@
 		10 MIP 6600, his astounding predictions had little projection
 		into my horizons.
 		</p>
-		
+
 		<h3>Sketchpad and Simula</h3>
-	
+
 		<p>Through a series of flukes, I wound up in graduate school at the University of Utah in the Fall of
 		1966, "knowing nothing."  That is to say, I had never heard of ARPA or its projects, or that Utah's main
 		goal in this community was to solve the "hidden line" problem in 3D graphics, until I actually
@@ -378,15 +327,15 @@
 		brown covered documents, one of which he handed to me: "Take this and read it."
 		</p>
 		<p>
-		Every newcomer got one.  The title was "Sketchpad: A man-machine graphical communication 
+		Every newcomer got one.  The title was "Sketchpad: A man-machine graphical communication
 		system" [Sutherland, 1963].  What it could do was quite remarkable, and completely foreign to any use of
 		a computer I had ever encountered.  The three big ideas that were easiest to grapple with were: it was
 		the invention of modern interactive computer graphics; things were described by making a "master
 		drawing" that could produce "instance drawings"; control and dynamics were supplied by
 		"constraints," also in graphical form, that could be applied to the masters to shape an inter-related parts.
 		Its data structures were hard to understand&mdash;the only vaguely familiar construct was the embedding
-		of pointers to procedures and using a process called reverse indexing to jump through them to 
-		routines, like the 220 file system [Ross, 1961].  It was the first to have clipping and zooming 
+		of pointers to procedures and using a process called reverse indexing to jump through them to
+		routines, like the 220 file system [Ross, 1961].  It was the first to have clipping and zooming
 		windows&mdash;one "sketched" on a virtual sheet about 1/3 mile square!
 		</p>
 
@@ -418,7 +367,7 @@
 		was that I had seen the idea enough times in enough different forms that the final recognition was in
 		such general terms to have the quality of an epiphany.  My math major had centered on abstract algebras
 		with their few operations generally applying to many structures.  My biology major had focused
-		on both cell metabolism and larger scale morphogenesis with its notions of simple mechanisms 
+		on both cell metabolism and larger scale morphogenesis with its notions of simple mechanisms
 		controlling complex processes and one kind of building block able to differentiate into all needed building
 		blocks.  The 220 file system, the B5000, Sketchpad, and finally Simula, all used the same idea
 		for different purposes.  Bob Barton, the main designer of the B5000 and a professor at Utah had said in
@@ -475,7 +424,7 @@
 		run byte-codes emulated in the longish slow microcode that was then possible.  The EULER compiler
 		however, was tortuously rendered in an "extended precedence" grammar that actually required
 		concessions in the language syntax (e.g. "," could only be used in one role because the precedence
-		scheme had no state space).  I initially adopted a bottom-up Floyd-Evans parser (adapted from Jerry 
+		scheme had no state space).  I initially adopted a bottom-up Floyd-Evans parser (adapted from Jerry
 		Feldman's original compiler-compiler [Feldman 1977]) and later went to various top-down schemes,
 		several of them related to Shorre's META II [Shorre 1963] that eventually put the translater in the name
 		space of the language.
@@ -502,7 +451,7 @@
 		and stopping it to show what was going on (people were
 		not used to seeing and following cursors back then).  His
 		notion on the ARPA dream was that the destiny of oNLine
-		Systems (NLS) was the "augmentation of human 
+		Systems (NLS) was the "augmentation of human
 		intellect" via an interactive vehicle navigating through
 		"thought vectors in concept space."  What his system
 		could do then&mdash;even by today's standards&mdash;was incredible.
@@ -510,7 +459,7 @@
 		navigation and command input, interactive collaborative
 		work, etc.  An entire conceptual world and world
 		view [Engelbart 68].  The impact of this vision was to produce
-		in the minds of those who were "eager to be 
+		in the minds of those who were "eager to be
 		augmented" a compelling metaphor of what interactive computing should be like, and I immediately adopted
 		many of the ideas for the FLEX machine.
 		</p>
@@ -521,7 +470,7 @@
 		with great impact.  For the first time I made the leap of
 		putting the room-sized interactive TX-2 or even a 10 MIP
 		6600 on a desk.  I was almost frightened by the implications;
-		computing as we knew it couldn't survive&mdash;the 
+		computing as we knew it couldn't survive&mdash;the
 		actual meaning of the word changed&mdash;it must have been
 		the same kind of disorientation people had after reading
 		Copernicus and first looked up from a different Earth to a
@@ -532,14 +481,14 @@
 		in the world&mdash;even today in 1992 it is estimated
 		that there are only 4000 IBM mainframes in the entire world&mdash;and
 		at most a few thousand users trained for
-		each application, there would be millions of <i>personal</i> 
+		each application, there would be millions of <i>personal</i>
 		machines and users, mostly outside of direct institutional
 		control.  Where would the applications and training come
 		from?  Why should we expect an applications programmer
 		to anticipate the specific needs of a particular one of
 		the millions of potential users?  An <i>extensional</i> system
 		seemed to be called for in which the end-users would do
-		most of the tailoring (and even some of the direct 
+		most of the tailoring (and even some of the direct
 		construction) of their tools.  ARPA had already figured this out
 		in the context of their early successes in time-sharing.
 		Their larger metaphor of human-computer symbiosis
@@ -547,13 +496,13 @@
 		abstract holy grail of "augmentation."
 		</p>
 		<p>
-		One of the interesting features of NLS was that its user interface was parametric and could be 
+		One of the interesting features of NLS was that its user interface was parametric and could be
 		supplied by the end user in the form of a "grammar of interaction" given in their compiler-compiler
 		TreeMeta.  This was similar to William Newman's early "Reaction Handler" [Newman 66] work in
 		specifying interfaces by having the end-user or developer construct through tablet and stylus an
 		iconic regular expression grammar with action procedures at the states (NLS allowed embeddings via
 		its context free rules).  This was attractive in many ways, particularly William's scheme, but to me
-		there was a monstrous bug in this approach.  Namely, these grammars forced the user to be in a 
+		there was a monstrous bug in this approach.  Namely, these grammars forced the user to be in a
 		system state which required getting out of before any new kind of interaction could be done.  In hierarchical
 		menus or "screens"  one would have to backtrack to a master state in order to go somewhere
 		else.  What seemed to be required were states in which there was a transition arrow to every other
@@ -574,7 +523,7 @@
 		contained two pointers: the first to the "master" of the object, and the second to the object instances (later
 		we realized that we should put the master pointer in the instance to save space).  A different method
 		was taken for handling generalized assignment.  The B5000 used l-values and r-values [Strachey*]
-		which worked for some cases but couldn't handle more complex objects.  For example: <i>a[55] := 0</i>, if <i>a</i> was a 
+		which worked for some cases but couldn't handle more complex objects.  For example: <i>a[55] := 0</i>, if <i>a</i> was a
 		sparse array whose default element was 0 would still generate an element in the array because
 		:= is an "operator" and <i>a[55]</i> is dereferenced into an l-value before anyone gets to see that the r-value
 		is the default element, regardless of whether <i>a</i> is an array or a procedure fronting for an array.  What
@@ -601,7 +550,7 @@
 		</p>
 		<pre>while i &lt;= 1 to 30 by 2 ^ j &lt;= 2 to k by 3 do j&lt;-j * i;</pre>
 		<p>
-		where the <b>... to ... by ...</b> was a kind of coroutine object.  Many of these ideas were reimplemented in a 
+		where the <b>... to ... by ...</b> was a kind of coroutine object.  Many of these ideas were reimplemented in a
 		stronger style in Smalltalk later on.
 		</p>
                 <a href="Images/flexstatement.png" target="_blank"><img src="Images/thumbnails/flexstatement.jpg" alt="FLEX when statement [Ka 69]" align="right" style="max-width: 268px"></a>
@@ -638,7 +587,7 @@
 		traditional education methods, and from him I heard the ideas of Piaget and Papert for the first time.
 		Marvin's talk was about how we think about complex situations and why schools are really bad
 		places to learn these skills.  He didn't have to make any claims about computers+kids to make his
-		point.  It was clear that education and learning had to be rethought in the light of 20th century 
+		point.  It was clear that education and learning had to be rethought in the light of 20th century
 		cognitive psychology and how good thinkers really think.  Computing enters as a new representation system
 		with new and useful metaphors for dealing with complexity, especially of systems [Minsky 70].
 		</p>
@@ -647,15 +596,15 @@
 		For the summer 1968 ARPA grad students meeting at Allerton House in Illinois, I boiled  all the mechanisms in the FLEX machine down into one 2'x3' chart.  This included
 		all the "object structures", the compiler, the byte-code
 		interpreter, i/o handlers, and a simple display editor
-		for text and graphics.  The grad students were a 
+		for text and graphics.  The grad students were a
 		distinguished group that did indeed become colleagues in
 		subsequent years.  My FLEX machine talk was a success,
 		but the big whammy for me came during a tour to U of Illinois
-		where I saw a 1" square lump of glass and neon gas in which individual spots would light up on 
+		where I saw a 1" square lump of glass and neon gas in which individual spots would light up on
 		command&mdash;it was the first flat-panel display.  I spent the rest
-		of the conference calculating just when the silicon of the 
+		of the conference calculating just when the silicon of the
 		FLEX machine could be put on the back of the display.  According to Gordon Moore's "Law", the
-		answer seemed to be sometime in the late seventies or early eighties.  A long time off&mdash;it seemed too 
+		answer seemed to be sometime in the late seventies or early eighties.  A long time off&mdash;it seemed too
 		long to worry much about it then.
 		</p>
                 <a href="Images/dynabookmodel.png" target="_blank"><img src="Images/thumbnails/dynabookmodel.jpg" alt="Grail, Seymour Papert and LOGO Turtle, The Dynabook Model" style="max-width: 372px" align="right"></a>
@@ -663,10 +612,10 @@
 		But later that year at RAND I saw a truly beautiful system.
 		This was GRAIL, the graphical followon to JOSS.  The
 		first tablet (the famous RAND tablet) was invented by
-		Tom Ellis [Davis 1964] in order to capture human 
+		Tom Ellis [Davis 1964] in order to capture human
 		gestures, and Gave Groner wrote a program to efficiently
 		recognize and respond to them [Groner 1966].  Though
-		everything was fastened with bubble gum and the 
+		everything was fastened with bubble gum and the
 		system crashed often, I have never forgotten my first interactions
 		with this system.  It was direct manipulation, it
 		was analogical, it was modeless, it was beautiful.  I realized
@@ -682,10 +631,10 @@
 		doing real programming with a specially designed
 		language and environment.  As with Simula leading to
 		OOP, this encounter finally hit me with what the destiny
-		of personal computing <i>really</i> was going to be.  Not a 
+		of personal computing <i>really</i> was going to be.  Not a
 		personal dynamic <i>vehicle,</i> as in Engelbart's metaphor
 		opposed to the IBM "railroads", but something much
-		more profound: a personal dynamic <i>medium.</i>  With a 
+		more profound: a personal dynamic <i>medium.</i>  With a
 		vehicle one could wait until high school and give "drivers
 		ed", but if it was a medium, it had to extend into
 		the world of childhood.
@@ -693,10 +642,10 @@
 		<p>
 		Now the collision of the FLEX machine, the flat-screen
 		display, GRAIL, Barton's "communications" talk,
-		McLuhan, and Papert's work with children all came 
+		McLuhan, and Papert's work with children all came
 		together to form an image of what a personal computer
-		really should be.  I remembered Aldus Manutius who 40 
-		years after the printing press put the book into its 
+		really should be.  I remembered Aldus Manutius who 40
+		years after the printing press put the book into its
 		modern dimensions by making it fit into saddlebags.  It had
 		to be no larger than a notebook, and needed an interface
 		as friendly as JOSS', GRAIL's, and LOGO's, but with the
@@ -713,7 +662,7 @@
 		<p>
 		Early next year (1969) there was a conference on Extensible Languages in which almost every
 		famous name in the field attended.  The debate was great and weighty&mdash;it was a religious war of
-		unimplemented poorly thought out ideas.  As Alan Perlis, one of the great men in Computer Science, 
+		unimplemented poorly thought out ideas.  As Alan Perlis, one of the great men in Computer Science,
 		put it with characteristic wit:
 		</p>
 			<blockquote>
@@ -732,7 +681,7 @@
 		extended so far [Irons 1970].
 		</p>
 		<p>
-		I had already made the first version of the FLEX machine syntax driven, but where the meaning of a 
+		I had already made the first version of the FLEX machine syntax driven, but where the meaning of a
 		phrase was defined in the more usual way as the kind of code that was emitted.  This separated the
 		compiler-extensor part of the system from the end-user.  In Irons' approach, <i>every</i> procedure in the
 		system defined its own syntax in a natural and useful manner.  I incorporated these ideas into the
@@ -743,9 +692,9 @@
 		The mental image was one of separate computers sending requests to other computers that
 		had to be accepted and understood by the receivers before anything could happen.  In today's terms
 		every object would be a <i>server</i> offering <i>services</i> whose deployment and discretion depended entirely
-		on the server's notion of relationship with the servee.  As Liebniz said: "To get everything out of 
+		on the server's notion of relationship with the servee.  As Liebniz said: "To get everything out of
 		nothing, you only need to find one principle."  This was not well thought out enough to do the FLEX
-		machine any good, but formed a good point of departure for my thesis [Kay 69], which as Ivan 
+		machine any good, but formed a good point of departure for my thesis [Kay 69], which as Ivan
 		Sutherland liked to say was "anything you can get three people to sign."
 		</p>
 		<p>
@@ -754,7 +703,7 @@
 		that were very intriguing.  The first was Carl Hewitt's PLANNER, a programmable logic system that
 		formed the deductive basis of Winograd's SHRDLU [Sussman 69, Hewitt 69]  I designed several
 		languages based on a combination of the pattern matching schemes of FLEX and PLANNER [Kay 70].  The
-		second design was Pat Winston's concept formation system, a scheme for building semantic 
+		second design was Pat Winston's concept formation system, a scheme for building semantic
 		networks and comparing them to form analogies and learning processes [Winston 70].  It was kind of
 		"object-oriented".  One of its many good ideas was that the arcs of each net which served as attributes
 		in AOV triples should themselves be modeled as nets.  Thus, for example a first order arc called LEFT-OF
@@ -772,16 +721,16 @@
 		slow) things were "objects".  Fast things and small things, etc., weren't.  This needed to be fixed.
 		</p>
 		<p>
-		The biggest hit for me while at SAIL in late '69 was to <i>really understand</i> LISP.  Of course, every 
+		The biggest hit for me while at SAIL in late '69 was to <i>really understand</i> LISP.  Of course, every
 		student knew about <i>car, cdr</i>, and <i>cons</i>, but Utah was impoverished in that no one there used LISP and
 		hence, no one had penetrated the mysteries of <i>eval</i> and <i>apply</i>.  I could hardly believe how beautiful
 		and wonderful the <i>idea</i> of LISP was [McCarthy 1960].  I say it this way because LISP had not only been
-		around enough to get some honest barnacles, but worse, there were deep flaws in its logical 
+		around enough to get some honest barnacles, but worse, there were deep flaws in its logical
 		foundations.  By this, I mean that the pure language was supposed to be based on functions, but its most
 		important components&mdash;such as lambda expressions, quotes, and conds&mdash;were not functions at all,
 		and instead were called special forms.  Landin and others had been able to get quotes and conds in
-		terms of lambda by tricks that were variously clever and useful, but the flaw remained in the jewel.  
-		In the practical language things were better.  There were not just EXPRs (which evaluated their 
+		terms of lambda by tricks that were variously clever and useful, but the flaw remained in the jewel.
+		In the practical language things were better.  There were not just EXPRs (which evaluated their
 		arguments), but FEXPRs (which did not).  My next question was, why on earth call it a functional language?
 		Why not just base everything on FEXPRs and force evaluation on the receiving side when needed?  I
 		could never get a good answer, but the question was very helpful when it came time to invent
@@ -796,7 +745,7 @@
 		<p>
 		In July 1970, Xerox, at the urging of its chief scientist Jack Goldman, decided to set up a long range
 		research center in Palo Alto, California.  In September, George Pake, the former chancellor at
-		Washington University where Wes Clark's ARPA project was sited, hired Bob Taylor (who had left the 
+		Washington University where Wes Clark's ARPA project was sited, hired Bob Taylor (who had left the
 		ARPA office and was taking a sabbatical year at Utah) to start a "Computer Science Laboratory."  Bob
 		visited Palo Alto and we stayed up all night talking about it.   The Mansfield Amendment was threatening
 		to blindly muzzle the most enlightened ARPA funding in favor of directly military research, and
@@ -825,7 +774,7 @@
 		for children, but what you did had to be done well and be able to apply deeply.
 		</p>
 		<p>
-		Right after New Years 1971, Bob Taylor scored an enormous coup by attracting most of the 
+		Right after New Years 1971, Bob Taylor scored an enormous coup by attracting most of the
 		struggling Berkeley Computer Corp to PARC.  This group included Butler Lampson, Chuck Thacker, Peter
 		Deutsch, Jim Mitchell, Dick Shoup, Willie Sue Haugeland, and Ed Fiala.  Jim Mitchell urged the group
 		to hire Ed McCreight from CM and he arrived soon after.  Gary Starkweather was there already,
@@ -841,7 +790,7 @@
 		sight unseen a few years before) was horrified at the idea of their main competitor's computer being
 		used in the lab.  They balked.  The newly formed PARC group had a meeting in which it was decided
 		that it would take about three years to do a good operating system for the XDS SIGMA-7 but that we
-		could <i>build</i> "our own PDP-10" in a year.  My reaction was "Holy cow!"  In fact, they pulled it it off with 
+		could <i>build</i> "our own PDP-10" in a year.  My reaction was "Holy cow!"  In fact, they pulled it it off with
 		considerable panache.  MAXC was actually a microcoded emulation of the PDP-10 that used for the first
 		time the new integrated chip memories (1K bits!) instead of core memory.  Having practical in house
 		experience with both of these new technologies was critical for the more radical systems to come.
@@ -856,7 +805,7 @@
 		</p>
 		<pre>oddsEvens(x) = append(odds(x), evens(x))</pre>
 		<p>
-		the statement of the problem in Landin's LISP syntax&mdash;and also the first part of the solution.  Then a 
+		the statement of the problem in Landin's LISP syntax&mdash;and also the first part of the solution.  Then a
 		few seconds later:
 		</p>
 		<pre>where odds(x) = if null(x) &or; null(tl(x)) then x
@@ -869,7 +818,7 @@
 		smarter than I struggle for more than 30 minutes to not quite solve the problem his way (there was a
 		bug) made quite an impression.  It brought home to me once again that "point of view is worth 80 IQ
 		points."  I wasn't smarter but I had a much better internal thinking tool to amplify my abilities.  This
-		incident and others like it made paramount that any tool for children should have great thinking 
+		incident and others like it made paramount that any tool for children should have great thinking
 		patterns <u>and</u> deep beauty "built-in."
 		</p>
                 <a href="Images/penderypaperdisplay.png" target="_blank"><img src="Images/thumbnails/penderypaperdisplay.jpg" alt="Pendery Paper Display Transducer Design" align="right" style="max-width: 420px"></a>
@@ -886,7 +835,7 @@
 		the century in which almost any clear vision can be made!"  He remained
 		unconvinced, and  that led to the famous "Pendery Papers for PARC
 		Planning Purposes," a collection of
-		essays on various aspects of the 
+		essays on various aspects of the
 		future.  Mine proposed a version of the notebook as a "Display Transducer",
 		and Jim Mitchell's was entitled "NLS
 		on a Minicomputer."
@@ -913,11 +862,11 @@
 		</p>
 		<p>
 		In the summer of '71 I refined the KiddiKomp idea into a tighter design called miniCOM.  It used a
-		bit-slice approach like the NOVA 1200, had a bit-map display, a pointing device, a choice of 
+		bit-slice approach like the NOVA 1200, had a bit-map display, a pointing device, a choice of
 		"secondary" (really tertiary) storages, and a language I now called "Smalltalk"&mdash;as in "programming
 		should be a matter of ..." and "children should program in ...".  The name was also a reaction against
 		the "IndoEuropean god theory" where systems were named Zeus, Odin, and Thor, and hardly did
-		anything.  I figured that "Smalltalk" was so innocuous a label that if it ever did anything nice people 
+		anything.  I figured that "Smalltalk" was so innocuous a label that if it ever did anything nice people
 		would be pleasantly surprised.
 		</p>
                 <a href="Images/minicom.png" target="_blank"><img src="Images/thumbnails/minicom.jpg" alt="miniCOM" style="max-width: 507px"></a>
@@ -969,7 +918,7 @@ to :robot 'pickup' :block
 
 
 		<p>
-		As I mentioned previously, it was annoying that the 
+		As I mentioned previously, it was annoying that the
 		surface beauty of LISP was marred by some of its key
 		parts having to be introduced as "special forms" rather
 		than as its supposed universal building block of
@@ -1038,7 +987,7 @@ to :robot 'pickup' :block
 		<p>
 		One part of the perceived beauty of mathematics has to do with a wondrous synergy between parsimony,
 		generality, enlightenment, and finesse.  For example, the Pythagorean Theorem is expressible
-		in a single line, is true for all of the infinite number of right triangles, is incredibly useful in 
+		in a single line, is true for all of the infinite number of right triangles, is incredibly useful in
 		understanding many other relationships, and can be shown by a few simple but profound steps.
 		</p>
 		<p>
@@ -1046,7 +995,7 @@ to :robot 'pickup' :block
 		and a few to be parsimonious.  For example, we can define universal machine languages in just a few
 		instructions that can specify anything that can be computed.  But most of these we would not call
 		beautiful, in part because the amount and kind of code that has to be written to do anything interesting
-		is so contrived and turgid.  A simple and small system that can do interesting things also needs a 
+		is so contrived and turgid.  A simple and small system that can do interesting things also needs a
 		"high slope"&mdash;that is a good match between the degree of interestingness and the level of complexity
 		needed to express it.
 		</p>
@@ -1061,7 +1010,7 @@ to :robot 'pickup' :block
 		One of my continual worries at this time was about the size of the bit-map display.  Even if a mixed
 		mode was used (between fine-grained generated characters and coarse-grained general bit-map for
 		graphics) it would be hard to get enough information on the screen.  It occurred to me (in a shower,
-		my favorite place to think) that FLEXtype windows on a bit-map display could be made to appear as 
+		my favorite place to think) that FLEXtype windows on a bit-map display could be made to appear as
 		overlapping documents on a desktop.  When an overlapped one was refreshed it would appear to
 		come to the top of the stack.  At the time, this did not appear as <u>the</u> wonderful solution to the problem
 		but it did have the effect of magnifying the effective area  of the display enormously, so I decided to
@@ -1072,12 +1021,12 @@ to :robot 'pickup' :block
 		experimental character generator (built by Roger Bates) for the POLOS (PARC OnLine Office System)
 		terminals.  Gary Starkweather had just gotten the first laser printer to work and we ran a coax over to
 		his lab to feed him some text to print.  The "SLOT machine" (Scanning Laser Output Terminal) was
-		incredible. The only Xerox copier Gary could get to work on went at 1 page a second and could not 
+		incredible. The only Xerox copier Gary could get to work on went at 1 page a second and could not
 		be slowed down.  So Gary just  made the laser run at that rate with a resolution of 500 pixels to the
 		inch!
 		</p>
 		<p>
-		The character generator's font memory turned out to be large enough to simulate a bit-map 
+		The character generator's font memory turned out to be large enough to simulate a bit-map
 		display if one displayed a fixed "strike" and wrote into the font memory.  Ben Laws built a beautiful font
 		editor and he and I spent several months learning about the peculiarities of the human visual system
 		(it is decidedly non-linear).  I was very interested in high-quality text and graphical presentations
@@ -1089,7 +1038,7 @@ to :robot 'pickup' :block
 		<p>
 		Things were generally going well all over the lab until May of 72 when I tried to get resources to
 		build a few miniCOMs.  A relatively new executive ("X") did not want to give them to me.  I wrote a
-		memo explaining why the system was a good idea (see Appendix II), and then had a meeting to 
+		memo explaining why the system was a good idea (see Appendix II), and then had a meeting to
 		discuss it.  "X" shot it down completely saying among other things that we had used too many green
 		stamps getting Xerox to fund the time-shared MAXC and this use of resources for personal machines
 		would confuse them.  I was shocked.  I crawled away back to the experimental character generator
@@ -1097,12 +1046,12 @@ to :robot 'pickup' :block
 		</p>
 		<p>
 		I got Steve Purcell, a summer student from Stanford, to build my design for bit-map painting so
-		the kids could sketch as well as display computer graphics.  John Shoch built a line drawing and 
+		the kids could sketch as well as display computer graphics.  John Shoch built a line drawing and
 		gesture recognition system (based on Ledeen's [Newman and Sproull 72]) that was integrated with the
 		painting.  Bill Duvall of POLOS built a miniNLS that was quite remarkable in its speed and power.  The
 		first overlapping windows started to appear.  Bob Shur (with Steve Purcell's help) built a 2&frac12;D
 		animation system.  Along with Ben Laws' font editor, we could give quite a smashing demo of what we
-		intended to build for real over the next few years.  I remember giving one of these to a Xerox 
+		intended to build for real over the next few years.  I remember giving one of these to a Xerox
 		executive, including doing a portrait of him in the new painting system, and
 		wound it up with a flourish declaring: "And what's really great about
 		this is that it only has a 20% chance of success.  We're taking risk just like
@@ -1178,7 +1127,7 @@ to :robot 'pickup' :block
 		reasonable syntax for the code <i>a la</i> some of the FLEX machine techniques.
 		</p>
 		<p>
-		It turned out to be more difficult than I had first thought for three reasons.  First, I wanted the 
+		It turned out to be more difficult than I had first thought for three reasons.  First, I wanted the
 		program to be more like McCarthy's second non-recursive interpreter&mdash;the one implemented as a loop
 		that tried to resemble the original 709 implementation of Steve Russell as much as possible.  It was
 		more "real".  Second, the intertwining of the "parsing" with message receipt&mdash;the evaluation of
@@ -1223,7 +1172,7 @@ to :robot 'pickup' :block
 		paper was an extensive rotogravure of "20 things to do with a Dynabook" [Kay 72c].  By the time I got
 		back from Minnesota, Stewart Brand's <i>Rolling Stone</i> article about PARC [Brand 1972] and the surrounding
 		hacker community had hit the stands.  To our enormous surprise it caused a major furor at Xerox
-		headquarters in Stamford, Connecticut.  Though it was a wonderful article that really caught the 
+		headquarters in Stamford, Connecticut.  Though it was a wonderful article that really caught the
 		spirit of the whole culture, Xerox went berserk, forced us to wear badges (over the years many were
 		printed on t-shirts), and severely restricted the kinds of publications that could be made.  This was
 		particularly disastrous for LRG, since we were the "lunatic fringe" (so-called by the other computer
@@ -1251,7 +1200,7 @@ to :robot 'pickup' :block
 		replaced by microcode.  Even the refresh of the MOS dynamic RAM was done by a task.  In other
 		words, this was a coroutine architecture.  Chuck claimed that he got the idea from a lecture I had
 		given on coroutines a few months before, but I remembered that Wes Clark's TX-2 (the Sketchpad
-		machine) had used the idea first, and I 
+		machine) had used the idea first, and I
 		probably mentioned that in the talk.
 		</p>
 		<p>
@@ -1263,10 +1212,10 @@ to :robot 'pickup' :block
 		</p>
 		<p>
 		Soon Dan had bootstrapped Smalltalk across, and for many months it was the sole software system to run on the
-		Interim Dynabook.  Appendix I has an 
+		Interim Dynabook.  Appendix I has an
 		"acknowledgements" document I wrote
 		from this time that is interesting it its
-		allocation of credits and the various 
+		allocation of credits and the various
 		priorities associated with them.  My $230K
 		was enough to get 15 of the original
 		projected 30 machines (over the years some 2000 Interim Dynabooks were actually built).  True to
@@ -1277,9 +1226,9 @@ to :robot 'pickup' :block
                 <div class="rightcolumn">
 		  <ol>
 		    <li>Everything is an object</li>
-		    <li>Objects communicate by sending and 
+		    <li>Objects communicate by sending and
 		      receiving <i>messages</i> (in terms of objects)</li>
-		    <li>Objects have their <i>own memory</i> 
+		    <li>Objects have their <i>own memory</i>
 		      (in terms of objects)</li>
 		    <li>Every object is an instance of a <i>class</i>
 		      (which must be an object)</li>
@@ -1291,7 +1240,7 @@ to :robot 'pickup' :block
 		    </li>
 		  </ol>
                 </div>
-                
+
 		<p>
 		By this time most of Smalltalk's schemes had been sorted
 		out into six main ideas that were in accord with the initial
@@ -1301,7 +1250,7 @@ to :robot 'pickup' :block
 		over the years.  The last three&mdash;objects from the
 		inside&mdash;were tinkered with in every version of Smalltalk
 		(and in subsequent OOP designs).  In this scheme (1 &amp; 4)
-		imply that classes are objects and that they must be 
+		imply that classes are objects and that they must be
 		instances of themself.  (6) implies a LISPlike universal syntax,
 		but with the receiving object as the first item followed by the
 		message.  Thus <code>c<sub>i</sub> &lt;- de</code> (with subscripting rendered as "&#9675;"
@@ -1341,7 +1290,7 @@ to :robot 'pickup' :block
 
 		<p>Since control is passed to the class before any of the rest of the message is considered&mdash;the class
 		can decide <u>not</u> to receive at its discretion&mdash;complete protection is retained.  Smalltalk-72 objects are
-		"shiny" and impervious to attack.  Part of the environment is the binding of the SENDER in the 
+		"shiny" and impervious to attack.  Part of the environment is the binding of the SENDER in the
 		"messenger object" (a generalized activation record) which allows the receiver to determine differential
 		privileges (see Appendix II for more details).  This looked ahead to the eventual use of Smalltalk as a
 		network OS (See [Goldstein &amp; Bobrow 1980]), and I don't recall it being used very much in Smalltalk-72.
@@ -1360,8 +1309,8 @@ to :robot 'pickup' :block
 		<p>
 		Of course, the whole idea of Smalltalk (and OOP in general) is to define everything <i>intensionally</i>.
 		And this was the direction of movement as we learned how to program in the new style.  I never
-		liked this syntax (too many parentheses and nestings) and wanted something flatter and more 
-		grammar-like as in Smalltalk-71.  To the right is an example 
+		liked this syntax (too many parentheses and nestings) and wanted something flatter and more
+		grammar-like as in Smalltalk-71.  To the right is an example
 		syntax from the notes of a talk I gave around
 		then.  We will see something more like this a few
 		years later in Dan's design for Smalltalk-76.  I think
@@ -1387,11 +1336,11 @@ Pair :h :t
 	length          &raquo; 1 + if t isList then t length else 0
 </pre>
 </div>
-		
+
 		<h3>Development of the Smalltalk-72 System and Applications</h3>
                 <a href="Images/firstbuildaltos.png" target="_blank"><img src="Images/thumbnails/firstbuildaltos.jpg" alt="One of the 'first build' ALTOs, Early Smalltalk Windows on Interim Dynabook, Turtles" style="max-width: 300px" align="right"></a>
 		<p>
-		The advent of a real Smalltalk on a real machine 
+		The advent of a real Smalltalk on a real machine
 		started off an explosion of parallel paths that are too difficult
 		to intertwine in strict historical order.  Let me first present
 		the general development of the Smalltalk-72 system up to
@@ -1400,7 +1349,7 @@ Pair :h :t
 		primary motivation for the project.  The Smalltalk-72 interpreter
 		on the Interim Dynabook was not exactly zippy
 		("majestic" was Butler's pronouncement), but was easy
-		to change and quite fast enough for many real-time 
+		to change and quite fast enough for many real-time
 		interactive systems to be built in it.
 		</p>
 		<p>
@@ -1426,26 +1375,26 @@ Pair :h :t
 		used a simple "loopless" control scheme that threaded all
 		of the windows together.
 		</p>
-		<p> One of the next classes to be implemented on the 
+		<p> One of the next classes to be implemented on the
 		Interim Dynabook (after the basics of numbers, strings,
 		etc.) was an object-oriented version of the LOGO turtle
 		implemented by Ted.  This could make many turtle
 		instances that were used both for drawing and as a kind
 		of value for graphics transformations.  Dan created a class
-		of "commander" turtles that could control a troop of 
+		of "commander" turtles that could control a troop of
 		turtles.  Soon the turtles were made so they could be clipped
 		by the windows.
 		</p>
 		<p>
-		John Shoch built a mouse-driven structured editor for 
+		John Shoch built a mouse-driven structured editor for
 		Smalltalk code.
 		</p>
                 <br clear="all">
                 <a href="Images/findit.png" target="_blank"><img src="Images/thumbnails/findit.jpg" alt="Findit Retrieval By Example, Retrieved HyperDocument, FM Timbre Editor, OPUS Score Capture" align="right" style="max-width: 309px"></a>
 		<p>
-		Larry Tesler (then working for POLOS) did not like the 
+		Larry Tesler (then working for POLOS) did not like the
 		modiness and general approach of NLS, and he wanted
-		both show the former NLSers an alternative and to 
+		both show the former NLSers an alternative and to
 		conduct some user studies (almost unheard of in those
 		days) about editing.  This led to his programming
 		<i>miniMOUSE</i> in Smalltalk, the first real WYSIWYG galley editor
@@ -1458,7 +1407,7 @@ Pair :h :t
 		</p>
 		<p>
 		One of the "small program" projects I tried on an
-		adult class in the Spring of '74 was a one-page 
+		adult class in the Spring of '74 was a one-page
 		paragraph editor.  It turned out to be too complicated, but the
 		example I did to show them was completely modeless
 		(it was in the air) and became the basis for much of
@@ -1467,10 +1416,10 @@ Pair :h :t
 		Of course, objects mean multi-media documents, you
 		almost get them for free.  Early on we realized that in
 		such a document, each component object should handle
-		its own editing chores.  Steve Weyer built some of the 
+		its own editing chores.  Steve Weyer built some of the
 		earliest multi-media documents, whose range was
 		greatly and variously expanded over the years by Bob
-		Flegal, Diana Merry, Larry Tesler, Tim Mott, and Trygve 
+		Flegal, Diana Merry, Larry Tesler, Tim Mott, and Trygve
 		Reenskaug.
 		</p>
 		<p>
@@ -1489,7 +1438,7 @@ Pair :h :t
 		made it easy to connect 154 more to wire up two
 		organ keyboards and a pedal.  Effects such as portamento
 		and decay were programmed. Ted Kaehler wrote
-		TWANG, a music capture and editing system, using a 
+		TWANG, a music capture and editing system, using a
 		tablature notation that we devised to make music clear
 		to children [Kay 1977a].  One of the things that was hard to
 		do with sampling was the voltage controlled oscillator
@@ -1508,10 +1457,10 @@ Pair :h :t
 		Chris Jeffers (who was a musician and educator, not
 		a computer scientist) knocked us out with OPUS, the first
 		real-time score capturing system.  Unlike most systems
-		today it did not require metronomic playing but 
+		today it did not require metronomic playing but
 		instead took a first pass looking for strong and weak
 		beats (the phrasing) to establish a local model of the
-		likely tempo fluctuations and then used curve fitting 
+		likely tempo fluctuations and then used curve fitting
 		and extrapolation to make judgements about just
 		where in the measure, and for what time value, a
 		given note had been struck.
@@ -1523,13 +1472,13 @@ Pair :h :t
 		we wanted "Disney rates" of 10-15 frames a second
 		for 10 or more large objects and many more smaller
 		ones.  This task was put into the ingenious hands of
-		Steve Purcell.  By the fall of '73 he could demo 80 
-		ping-pong balls and 10 flying horses running at 10 frames 
+		Steve Purcell.  By the fall of '73 he could demo 80
+		ping-pong balls and 10 flying horses running at 10 frames
 		per second in 2&frac12;D.  His next task was to make
 		the demo into a general systems facility from which
 		we could construct animation systems.  His CHAOS
 		system started working in May '74, just in time for summer
-		visitors Ron Baecker, Tom Horseeley, and 
+		visitors Ron Baecker, Tom Horseeley, and
 		professional animator Eric Martin to visit and build SHAZAM
 		a marvelously capable and simple animation system
 		based on Ron's GENESYS thesis project on the TX-2 in
@@ -1539,20 +1488,20 @@ Pair :h :t
 		The main thesis project during this time was Dave
 		Smith's PYGMALION [Smith 75], an essay into iconic
 		programming (no, we hadn't quite forgotten).  One
-		programmed by showing the system how changes should be made, much as one would illustrate on a 
+		programmed by showing the system how changes should be made, much as one would illustrate on a
 		blackboard with another programmer.  This program
 		became the starting place from which many subsequent "programming by example" systems took off.
 		</p>
 		<p>
-		I should say something about the size of these 
+		I should say something about the size of these
 		programs.  PYGMALION was the largest program ever
 		written in Smalltalk-72.  It was about 20 pages of code&mdash;all
 		that would fit in the interim dynabook ALTO&mdash;and is
 		given in full in Smith's thesis.  All of the other applications
-		were smaller.  For example, the SHAZAM animation system 
+		were smaller.  For example, the SHAZAM animation system
 		was written and revised several times in
 		the summer of 1974, and finally wound up as a 5-6
-		page application which included its icon-controlled 
+		page application which included its icon-controlled
 		multiwindowed user interface.
 		</p>
 		<p>
@@ -1564,7 +1513,7 @@ Pair :h :t
 		methods as separate simulation phases.  The generic
 		SIMULA example was a job shop.  This could be generalized
 		into many useful forms such as a hospital with
-		departments of resources serving patients (see to the 
+		departments of resources serving patients (see to the
 		right).  The children did not care for hospitals but saw that
 		they could model amusement parks, like Disneyland,
 		their schools, the stores they and their parents
@@ -1583,10 +1532,10 @@ then case
     Return: ('deal with this normal exit')
     Delete: ('handle the abnormal exit'))
 </pre>
-		
+
                 <p>
 		Many nice "computer sciency" constructs were easy to make in Smalltalk-72.  For example, one of
-		the controversies of the day was whether to have gotos or not (we didn't), and if not, how could 
+		the controversies of the day was whether to have gotos or not (we didn't), and if not, how could
 		certain very useful control structures&mdash;such as multiple exits from a loop&mdash;be specified?  Chuck Zahn at
 		SLAC proposed an <i>event-driven case</i> structure in which a set of
 		events could be defined so that when an event is encountered,
@@ -1603,15 +1552,15 @@ then case
 
 		<p>
 		Smalltalk-74 (sometimes known as FastTalk) was a version of Smalltalk-72 incorporating major
-		improvements which included providing a real "messenger" object, message dictionaries for classes 
+		improvements which included providing a real "messenger" object, message dictionaries for classes
 		(a step towards real class objects), Diana Merry's bitblt (the now famous 2D graphics operator for
-		bitmap graphics) redesigned by Dan and implemented in microcode, and a better, more general 
+		bitmap graphics) redesigned by Dan and implemented in microcode, and a better, more general
 		window interface.  Dave Robson while a student at UC Irvine had heard of our project and made a pretty
 		good stab at implementing an OOPL.  We invited him for a summer and never let him go back&mdash;he was
 		a great help in formulating an official semantics for Smalltalk.
 		</p>
 		<p>
-		The crowning addition was the OOZE (Object Oriented Zoned Environment) virtual memory 
+		The crowning addition was the OOZE (Object Oriented Zoned Environment) virtual memory
 		system that served Smalltalk-74, and more importantly, Smalltalk-76 [Ing 78, Kae *].  The ALTO was not
 		very large (128-256K), especially with its page-sized display (64k), and even with small programs, we
 		soon ran out of storage.  The 2.4 megabyte model 30 disk drive was faster and larger than a floppy
@@ -1637,7 +1586,7 @@ then case
 		</p>
 		<p>
 		The other problem that had to be taken care of was object-pointer integrity (and this is where I had
-		failed in the FLEX machine to come up with a good enough solution).  What was needed really was a 
+		failed in the FLEX machine to come up with a good enough solution).  What was needed really was a
 		complete <i>transaction,</i> a brand new technique (thought up by Butler?) that ensured recovery regardless
 		of when the system crashed.  This was called "cosmic ray protection" as the early ALTOS had a way of
 		just crashing once or twice a day for no discernible good reason.  This, by the way did not particularly
@@ -1650,7 +1599,7 @@ then case
 		machine addresses for objects would be found.   Other useful information was stashed there as well to
 		help LRU aging.  Purging was done in background by picking a class, positioning the disk to its
 		instances (all of a particular class were stored together), then running through the ROT to find the
-		dirty ones in storage and stream them out.  This was pretty efficient and, true to Butler's insight, 
+		dirty ones in storage and stream them out.  This was pretty efficient and, true to Butler's insight,
 		furnished a good sized pool of clean storage that could be overwritten.  The key to the design though
 		(and the implementation of the transaction mechanism) was the checkpointing scheme they came up
 		with.  This insured that there was a recoverable image no more than a few seconds old, regardless of
@@ -1663,7 +1612,7 @@ then case
 
 		<p>
 		This is probably a good place to comment on the difference between what we thought of as OOP-style
-		and the superficial encapsulation called "abstract data types" that was just starting to be 
+		and the superficial encapsulation called "abstract data types" that was just starting to be
 		investigated in academic circles.  Our early "LISP-pair" definition is an example of an abstract data type
 		because it preserves the "field access" and "field rebinding" that is the hallmark of a data structure.
 		Considerable work in the 60s was concerned with generalizing such structures [DSP *].  The "official"
@@ -1680,7 +1629,7 @@ then case
 		Even the way we taught children (cf. ahead) reflected this way of looking at objects.  Not too
 		surprisingly this approach has considerable bearing on the ease of programming, the size of the code
 		needed, the integrity of the design, etc.  It is unfortunate that much of what is called "object-oriented
-		programming" today is simply old style programming with fancier constructs.  Many programs are 
+		programming" today is simply old style programming with fancier constructs.  Many programs are
 		loaded with "assignment-style" operations now done by more expensive attached procedures.
 		</p>
 		<p>
@@ -1709,7 +1658,7 @@ then case
 		ones&mdash;express very low-level goals, and more of them will be needed to get anything done.
 		Generally, we don't want the programmer to be messing around with state, whether simulated or
 		not.  The ability to instantiate an object has a considerable effect on code size as well.  Another way to
-		think of all this is: though the late-binding of automatic storage allocations doesn't do anything a 
+		think of all this is: though the late-binding of automatic storage allocations doesn't do anything a
 		programmer can't do, its presence leads both to simpler and more powerful code.  OOP is a late binding
 		strategy for many things and all of them together hold off fragility and size explosion much longer
 		than the older methodologies.  In other words, human programmers aren't Turing machines&mdash;and the
@@ -1721,17 +1670,17 @@ then case
 		<p>
 		Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk
 		up to 1976, let me return to the summer of '73, when we were ready to start experiments with
-		children.  None of us knew anything about working with 
+		children.  None of us knew anything about working with
 		children, but we knew that Adele Goldberg and Steve Weyer
 		who were then with Pat Suppes at Stanford had done
 		quite a bit and we were able to entice them to join us.
 		</p>
 		<p>
-		Since we had no idea how to teach object-oriented 
+		Since we had no idea how to teach object-oriented
 		programming to children (or anyone else), the first
 		experiments Adele did mimicked LOGO turtle graphics, and she
 		got what appeared to be very similar results.  That is to
-		say, the children could get the turtle to draw pictures on 
+		say, the children could get the turtle to draw pictures on
 		the screen, but there seemed to be little happening
 		beyond surface effects.  At that time I felt that since the
 		content of personal computing was interactive tools, that
@@ -1777,14 +1726,14 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		background) and we tended to be much more excited
 		about the successes than the difficulties.  In part, what we
 		were seeing was the "hacker phenomenon," that, for any
-		given pursuit, a particular 5% of the population will jump 
+		given pursuit, a particular 5% of the population will jump
 		into it naturally, while the 80% or so who can learn
 		it in time do not find it at all natural.
 		</p>
 		<p>
-		We had a dim sense of this, but we kept on having 
-		relative successes.  We could definitely see that learning the 
-		mechanics of the system was not a major problem. The 
+		We had a dim sense of this, but we kept on having
+		relative successes.  We could definitely see that learning the
+		mechanics of the system was not a major problem. The
 		children could get most of it themselves by swarming
 		over the ALTOS with Adele's JOE book.  The problem
 		seemed more to be that of <i>design.</i>
@@ -1792,19 +1741,19 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
                 <br clear="all">
                 <a href="Images/author.png" target="_blank"><img src="Images/thumbnails/author.jpg" alt="The author in the interim Dynabook playroom, Adele's planning template for Smalltalk (above) New behavior added by child (below), Marion Goldeen's painting program (above) Susan Hamel's OO Illustrator (below)" style="max-width: 296px" align="right"></a>
 		<p>
-		It started to hit home in the Spring of '74 after I taught 
+		It started to hit home in the Spring of '74 after I taught
 		Smalltalk to 20 PARC nonprogrammer adults.  They were
-		able to get through the initial material faster than the 
+		able to get through the initial material faster than the
 		children, but just as it looked like an overwhelming success
 		was at hand, they started to crash on problems that didn't
 		look to me to be much harder than the ones they had just
-		been doing well on.  One of them was a project thought 
+		been doing well on.  One of them was a project thought
 		up by one of the adults, which was to make a little
 		database system that could act like a card file or rolodex.  They
 		couldn't even come close to programming it.  I was very
-		surprised because I "knew" that such a project was well 
+		surprised because I "knew" that such a project was well
 		below the mythical "two pages" for end-users we were
-		working within.  That night I wrote it out, and the next 
+		working within.  That night I wrote it out, and the next
 		day I showed all of them how to do it.  Still, none of them
 		were able to do it by themselves.  Later, I sat in the room
 		pondering the board from my talk.  Finally, I counted the
@@ -1831,8 +1780,8 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
 		<p>
 		Using these the children could look at a situation they
-		wanted to simulate, and decompose it into classes and 
-		messages without having to worry just how a method would 
+		wanted to simulate, and decompose it into classes and
+		messages without having to worry just how a method would
 		work.  The method planning could then be done
 		informally in English, and these notes would later serve
 		as commentaries and guides to the writing of the actual
@@ -1843,17 +1792,17 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		out, it is hard to claim success if only some of the children
 		are successful&mdash;<u>and</u> if a maximum effort of both children
 		and teachers was required to get the successes to happen.
-		Real pedagogy has to work in much less idealistic 
-		settings and be considerably more robust.  Still, <u>some</u> 
+		Real pedagogy has to work in much less idealistic
+		settings and be considerably more robust.  Still, <u>some</u>
 		successes are qualitatively different from <u>no</u> successes.  We
 		wanted more, and started to push on the inheritance idea
 		as a way to let novices build on frameworks that could
 		only be designed by experts.  We had good reason
-		to believe that this could work because we had been 
+		to believe that this could work because we had been
 		impressed by Lisa van Stone's ability to make significant
-		changes to SHAZAM (the five or six page Smalltalk 
+		changes to SHAZAM (the five or six page Smalltalk
 		animation tool done by relatively expert adults).  Unfortunately,
-		inheritance&mdash;though an incredibly powerful technique&mdash;has 
+		inheritance&mdash;though an incredibly powerful technique&mdash;has
 		turned out to be very difficult for novices (and even
 		professionals) to deal with.
 		</p>
@@ -1867,14 +1816,14 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		that there is now a large accumulation of results from
 		many attempts to teach novices programming [Soloway 1989].
 		They all have similar stories that seem to have little
-		to do with the various features of the programming 
+		to do with the various features of the programming
 		languages used, and everything to do with the difficulties
 		novices have thinking the special way that good
 		programmers think.  Even with a much better interface than
 		we had then (and have today), it is likely that this really is
 		actually more like writing than we wanted it to be.
 		Namely, for the "80%", it really has to be learned gradually
-		over a period of years in order to build up the 
+		over a period of years in order to build up the
 		structures that need to be there for design and solution
 		look-ahead.<sup>41</sup>
 		</p>
@@ -1887,7 +1836,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		What is difficult is to determine <i>what</i> ideas to put forth
 		and how <i>deeply</i> they should penetrate at a given child's
 		developmental level.  This confusion still persists for
-		reading and writing of natural language&mdash;and for 
+		reading and writing of natural language&mdash;and for
 		mathematics&mdash;despite centuries of experience.  And it is the
 		main hurdle for teaching children programming.  When,
 		in what order and depth, and how should the powerful
@@ -1900,11 +1849,11 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		ability to think well or to take an enlightened stance on
 		human knowledge.  If anything, the opposite is true.
 		Expert knowledge often remains rooted in the environments
-		in which it was first learned&mdash;and most metaphorical extensions 
+		in which it was first learned&mdash;and most metaphorical extensions
 		result in misleading analogies.  A remarkable
 		number of artists, scientists, philosophers are quite
 		dull outside of their specialty (and one suspects within it
-		as well).  The first siren's song we need to be wary of is the 
+		as well).  The first siren's song we need to be wary of is the
 		one that promises a connection between an interesting
 		pursuit and interesting thoughts.  The music is not in
 		the piano, and it is possible to graduate Juilliard without
@@ -1912,7 +1861,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
 		<p>
 		I have also met a few people for whom computing
-		provides an important new metaphor for thinking about 
+		provides an important new metaphor for thinking about
 		human knowledge and reach.  But something else was
 		needed besides computing for enlightenment to happen.
 		</p>
@@ -1931,7 +1880,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
 		<p>
 		The first is <i>fluency</i>, which in part is the process of building mental structures that disappear the
-		interpretation of the representations.  The letters and words of a sentence are experienced as 
+		interpretation of the representations.  The letters and words of a sentence are experienced as
 		meaning rather than markings, the tennis racquet or keyboard becomes an extension of one's body, and so
 		forth.  If carried further one eventually becomes a kind of expert&mdash;but without deep knowledge in
 		other areas, attempts to generalize are usually too crisp and ill formed.
@@ -1943,13 +1892,13 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
 		<p>
 		The "trick," and I think that this is what liberal arts educations is supposed to be about, is to get
-		fluent <u>and</u> deep while building relationships with other fluent deep knowledge.  Our society has 
+		fluent <u>and</u> deep while building relationships with other fluent deep knowledge.  Our society has
 		lowered its aims so far that it is happy with "increases in scores" without daring to inquire whether any
 		important threshold has been crossed.  Being able to read a warning on a pill bottle or write about a
 		summer vacation is not literacy and our society should not treat it so.  Literacy, for example, is being
 		able to fluently read and follow the 50 page argument in Paine's Common Sense and being able (and
 		happy) to fluently write a critique or defense of it.  Another kind of 20th century literacy is being able
-		to hear about a new fatal contagious incurable disease and instantly know that a disastrous 
+		to hear about a new fatal contagious incurable disease and instantly know that a disastrous
 		exponential relationship holds and early action is of the highest priority.  Another kind of literacy would take
 		citizens to their personal computers where they can fluently and without pain build a systems
 		simulation of the disease to use as a comparison against further information.
@@ -1965,7 +1914,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		ability to understand our world.
 		</p>
 		<p>
-		We did not know then, and I'm sorry to say from 15 years later, that these critical questions still do 
+		We did not know then, and I'm sorry to say from 15 years later, that these critical questions still do
 		not yet have really useful answers.  But there are some indications.  Even very young children can
 		understand and use interactive <i>transformational</i> tools.  The first ones are their hands!  They can readily
 		extend these experiences to computer objects and making changes to them.  They can often imagine
@@ -1989,7 +1938,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 	<h2><a name="p29">V. 1976-80&mdash;The first modern Smalltalk (-76), its birth, applications, and improvements</a></h2>
 
 		<p>
-		By the end of 1975 I felt that we were losing our balance&mdash;that the "Dynabook for children" idea 
+		By the end of 1975 I felt that we were losing our balance&mdash;that the "Dynabook for children" idea
 		was slowly dimming out&mdash;or perhaps starting to be overwhelmed by professional needs.  In January
 		1976, I took the whole group to Pajaro Dunes for a three day offsite to bring up the issues and try to
 		reset the compass.  It was called "Let's Burn Our Disk Packs."  There were no shouting matches, the
@@ -2025,7 +1974,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		It was a relative pointer and had an <i>up</i> sensor so it could be stroked like a mouse and would also stay
 		where you left it, but it felt like a stylus and used a pantograph mechanism that eliminated the
 		annoying hysteresis bias in the x and y directions that made it hard to use a mouse as a pen.  I
-		planned to use a multiprocessor architecture of slow but highly integrated chips as originally 
+		planned to use a multiprocessor architecture of slow but highly integrated chips as originally
 		specified for the Dynabook and wanted a new bytecoded interpreter for a friendlier and simpler system
 		than Smalltalk-72.
 		</p>
@@ -2036,7 +1985,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		in favor of a completely intensional definition with every piece of code as an intrinsic method.  We
 		had wanted that from the beginning, (and most of the code was already written that way).  There
 		were a variety of strong desires for a real inheritance mechanism from Adele and me, from Larry
-		Tesler, who was working on desktop publishing, and from the grad students.  Dan had to find a better 
+		Tesler, who was working on desktop publishing, and from the grad students.  Dan had to find a better
 		way than Simula's very rigid compile-time conception.  It was time to make good on the idea that
 		"everything was an object," which included all the internal "systems" objects like "activation
 		records," etc.  We were all agreed that the flexible syntax of the earlier Smalltalks was <u>too</u> flexible, and
@@ -2044,10 +1993,10 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		schemes, so Dan came up with a combination keyword/operator syntax that was very flexible, but
 		allowed the language to be read unambiguously by both humans and the machine.  This allowed a
 		FLEX machine-like byte-code compiler and efficient interpreter to be defined that ran up to 180 times
-		as fast as the previous direct interpreter.  The OOZE VM system could be modified to handle the new 
+		as fast as the previous direct interpreter.  The OOZE VM system could be modified to handle the new
 		objects and its capacity was well matched to the ALTO's RAM and disk.
 		</p>
-		
+
 		<h3>Inheritance</h3>
 
 		<p>
@@ -2072,7 +2021,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		versions of early desktop publishing systems.  Nowadays, this would be called a "delegation-style"
 		inheritance scheme [Liberman 84].  Danny Bobrow and Terry Winograd during this period were
 		designing a "frame-based" AI language called KRL which was "object-oriented" and I believe was
-		influenced by early Smalltalk.  It had a kind of multiple inheritance&mdash;called <i>perspectives</i>&mdash;which 
+		influenced by early Smalltalk.  It had a kind of multiple inheritance&mdash;called <i>perspectives</i>&mdash;which
 		permitted an object to play multiple roles in a very clean way.  Many of these ideas a few years later went
 		into PIE, an interesting extension of Smalltalk to networks and higher level descriptions by Ira
 		Goldstein and Bobrow [Goldstein &amp; Bobrow 1980].
@@ -2122,7 +2071,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 			<ul>
 				<li>There need only be a few hardware types to handle almost all of the processing activity of a system.
 				</li>
-				<li>Personal Computers, Communications Links, and Information Utilities are the three critical 
+				<li>Personal Computers, Communications Links, and Information Utilities are the three critical
 				components of a Xerox future.</li>
 			</ul>
 			<p>...</p>
@@ -2169,19 +2118,19 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<p>
 		In 1976, Chuck Thacker designed the ALTO III that would use the new 16k chips and be able to fit on
 		a desktop.  It could be marketed for about what the large cumbersome special purpose "word-processors"
-		cost, yet could do so much more.  Nevertheless, in August of 1976, Xerox made a fateful 
+		cost, yet could do so much more.  Nevertheless, in August of 1976, Xerox made a fateful
 		decision: not to bring the ALTO III to market.  This was a huge blow to many of us&mdash;even I, who had never
 		really, really thought of the ALTO as anything but a stepping stone to the "real thing."  In 1992, the
-		world market for personal computers and workstations was $90 million&mdash;twice as much as the 
+		world market for personal computers and workstations was $90 million&mdash;twice as much as the
 		mainframe and mini market, and many times Xerox's 1992 gross.  The most successful company of this
 		era&mdash;Microsoft&mdash;is not a hardware company, but a software company.
 		</p>
-		
+
 		<h3>The Smalltalk User Interface</h3>
 
 		<p>
 		I have been asked by several of the reviewers to say more about the development of the "Smalltalk-style"
-		overlapping window user interface since there are now more than 20 million computers in the 
+		overlapping window user interface since there are now more than 20 million computers in the
 		world that use its descendants.  A decent history would be as long as this chapter, and none has been
 		written so far.  There is a summary of some of the ideas in [Kay 89]&mdash;let me add a few more points.
 		</p>
@@ -2201,11 +2150,11 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		doing in a medium&mdash;our new "pocket universe."  For various reasons I had settled on "iconic
 		programming" as the way to achieve this, drawing on the iconic representations used by many ARPA
 		projects in the sixties.  My friend Nicholas Negroponte, an architect, was extremely interested in how
-		environments affected peoples' work and creativity.  He was interested in embedding the new 
+		environments affected peoples' work and creativity.  He was interested in embedding the new
 		computer magic in familiar surroundings.  I had quite a bit of theatrical experience in a past life, and
 		remembered Coleridge's adage that "people attend 'bad theatre' hoping to forget, people attend
 		'good theatre' <i>aching to remember</i>."  In other words, it is
-		the ability to evoke the audience's own intelligence 
+		the ability to evoke the audience's own intelligence
 		and experiences that makes theatre work.
 		</p>
                 <a href="Images/paulrovner.png" target="_blank"><img src="Images/thumbnails/paulrovner.jpg" alt="Paul Rovner showing the iconic 'Lincoln Wand' ca. 1968" style="max-width: 598px"></a>
@@ -2217,14 +2166,14 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		kinesthetic, iconic, and symbolic learning&mdash;"<i>doing</i> with
 		<i>images</i> makes <i>symbols</i>" (Piaget &amp; Bruner); the user is
 		never trapped in a mode (GRAIL); the magic is embedded
-		in the familiar (Negroponte); and which acts as a 
+		in the familiar (Negroponte); and which acts as a
 		magnifying mirror for the user's own intelligence
 		(Coleridge).  It would be a great finish to this story to
 		say that having articulated this we were able to move
 		straightforwardly to the design as we know it today.
 		In fact, the UI design work happened in fits and starts
 		in between feeding Smalltalk itself, designing children's
-		experiments, trying to understand iconic 
+		experiments, trying to understand iconic
 		construction, and just playing around.  In spite of this
 		meandering, the context almost forced a good design
 		to turn out anyway.  Just about everyone at PARC at this
@@ -2262,14 +2211,14 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		seven months.  this was such a wonderful achievement
 		that I was bowled over in spite of my wanting to start
 		over.  It was fast, lively, could handle "big" problems, and
-		was great fun.  The system consisted of about 50 classes 
+		was great fun.  The system consisted of about 50 classes
 		described in about 180 pages of source code.  This included
 		all of the OS functions, files, printing and other Ethernet
 		services, the window interface, editors, graphics and
 		painting systems, and two new contributions by Larry
 		Tesler, the famous browsers for static methods in the
 		inheritance hierarchy and dynamic contexts for debugging
-		in the runtime environment.  In every way it was the 
+		in the runtime environment.  In every way it was the
 		consolidation of all of our ideas and yearning about
 		Smalltalk in one integrated package.  All Smalltalks since
 		have resembled this conception very closely.  In many
@@ -2400,7 +2349,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<p>
 		On the morning of the "big day" Ted Kaehler decided to
 		make a change in the virtual memory system OOZE to speed
-		it up a little.  We all held our breaths, but such was the 
+		it up a little.  We all held our breaths, but such was the
 		clarity of the design and the confidence of the implementers
 		that it did work, and the executive hands-on was a howling
 		success.  About an hour into the first session one of the VPs
@@ -2426,7 +2375,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		that did not require the solver to be omniscient (or able to
 		solve Fermat's last theorem).
 		</p>
-		<p>We could see that the "pushing" style of Smalltalk could 
+		<p>We could see that the "pushing" style of Smalltalk could
 		eventually be replaced by a "pulling" style that was driven
 		by changes to values that different methods were based on.
 		This was an old idea but Thinglab showed how the object-oriented
@@ -2440,7 +2389,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<p>
 		Meanwhile, the <i>NoteTaker</i> was getting more real, bigger,
 		and slower.  By this time the Western Digital emulation-style
-		chips I hoped to used showed signs of being "diffusion-ware," and 
+		chips I hoped to used showed signs of being "diffusion-ware," and
 		did not look like they would really show
 		up.  We started looking around for something that we
 		could count on, even if it didn't have a good architecture.
@@ -2477,17 +2426,17 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		was now in Smalltalk), the overall interpreter was about
 		twice as fast as the ALTO version (because not all the
 		Smalltalk byte-code interpreter would fit into the 4k
-		microcode memory on the ALTO).  With various kinds of 
-		tricks and tuning, graphics display was "largely compensated" 
+		microcode memory on the ALTO).  With various kinds of
+		tricks and tuning, graphics display was "largely compensated"
 		(in Dan's words).  This was mainly because the ALTO
-		did not have enough microcode memory to take in all of 
-		the Smalltalk emulation code&mdash;some of it had to be 
+		did not have enough microcode memory to take in all of
+		the Smalltalk emulation code&mdash;some of it had to be
 		rendered in emulated "NOVA" code which forced two layers of
 		interpretation.  In fact, the <i>Notetaker</i> worked extremely well,
 		though it would have crushed any lap.  It had hopped back
 		on the desk, and looked suspiciously like miniCOM (and
 		several computers that would appear a few years later).  It
-		really did run on batteries and several of us had the 
+		really did run on batteries and several of us had the
 		pleasure of taking <i>NoteTaker</i> on a plane and running an
 		object-oriented system with a windowed interface at 35,000 feet.
 		</p>
@@ -2498,11 +2447,11 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		be done to make them had once again squeezed out the real
 		end-users for whom it was originally aimed.  If Xerox (and
 		PARC) as a whole had believed in these smaller scale ideas,
-		we could have put much more silicon muscle behind the 
+		we could have put much more silicon muscle behind the
 		dreams and successfully built them in the 70's when they
 		were first possible.  It was a bitter disappointment to have
 		to get the wrong kind of CPU from Intel and the wrong
-		kind of display from HP because there was not enough 
+		kind of display from HP because there was not enough
 		corporate will to take advantage of internal technological
 		expertise.
 		</p>
@@ -2517,7 +2466,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		six years after the ALTO started running, the people who
 		could really do something about the ideas, finally got to to see
 		them.  The machine used was the Dorado, a very fast "big
-		brother" of the ALTO, whose Smalltalk microcode had been 
+		brother" of the ALTO, whose Smalltalk microcode had been
 		largely written by Bruce Horn, one of our original
 		"Smalltalk kids" who was still only a teen-ager.  Larry
 		Tesler gave the main part of the demo with Dan sitting in
@@ -2550,12 +2499,12 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 
 		<p>
 		As Dan said "the decision not to continue the <i>NoteTaker</i> project added motivation to release
-		Smalltalk widely."  But not for me.  By this time I was both happy about the cleanliness and 
+		Smalltalk widely."  But not for me.  By this time I was both happy about the cleanliness and
 		elegance of the Smalltalk conception as realized by Dan and the others, and sad that it was farther
 		away than ever from the children&mdash;it came to me as a shock that no child had programmed in any
 		Smalltalk since Smalltalk-76 made its debut.  Xerox (and PARC) were now into "workstations" as
 		things in themselves&mdash;but I still wanted "playstations".  The  romance of the Dynabook seemed less
-		within grasp, paradoxically just when the various needed technologies were starting to be 
+		within grasp, paradoxically just when the various needed technologies were starting to be
 		commercially feasible&mdash;some of them, unfortunately, like the flat-screen display, abandoned to the Japanese
 		by the US companies who had invented them.  This was a major case of "snatching defeat from the
 		jaws of victory."  Larry Tesler decided that Xerox was never going to "get it" and was hired by
@@ -2577,12 +2526,12 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		quite reasonably already).  Peter's 1989 comment is typical and true: "metaclasses have proven
 		confusing to many users, and perhaps in the balance more confusing than valuable."  In fact, in their
 		PIE system, Goldstein and Bobrow had already implemented in Smalltalk an "observer language",
-		somewhat following the view-oriented approach I had been advocating and in some ways like the 
+		somewhat following the view-oriented approach I had been advocating and in some ways like the
 		"perspectives" proposed in KRL [Goldstein *].  Once one can view an instance via multiple perspectives
 		even "semi-metaclasses" like Class Class and Class Object are not really necessary since the
 		object-role and instance-of-a-class-role are just different views and it is easy to deal with life-history
 		issues including instantiation.  This was there for the taking (along with quite a few other good
-		ideas), but it wasn't adopted.  My guess is that Smalltalk had moved into the final phase I 
+		ideas), but it wasn't adopted.  My guess is that Smalltalk had moved into the final phase I
 		mentioned at the beginning of this story, in which a way of doing things finally gets canonized into an
 		inflexible belief structure.
 		</p>
@@ -2601,8 +2550,8 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		<i>late-bind</i>, then waging campaigns to convince manufacturers to build the ideas into hardware.  Early
 		hardware had wired programs and parameters; random access memory was a scheme to late-bind
 		them.  Looping and indexing used to be done by address modification in storage; index registers
-		were a way to late-bind.  Over the years software designers have found ways to late-bind the 
-		locations of computations&mdash;this led to base/bounds registers, segment relocation, page MMUs, 
+		were a way to late-bind.  Over the years software designers have found ways to late-bind the
+		locations of computations&mdash;this led to base/bounds registers, segment relocation, page MMUs,
 		migratory processes, and so forth.  Time-sharing was held back for years because it was "inefficient"&mdash;
 		but the manufacturers wouldn't put MMUs on the machines, universities had to do it themselves!
 		Recursion late-binds parameters to procedures, but it took years to get even rudimentary stack
@@ -2649,7 +2598,7 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		from the past of Simula, FLEX, CDL, Smalltalk, and Actors.
 		</p>
 		<p>
-		Another late-binding scheme that is already necessary is to get away from direct protocol 
+		Another late-binding scheme that is already necessary is to get away from direct protocol
 		matching when a new object shows up in a system of objects.  In other words, if someone sends you an
 		object from halfway around the world it will be unusual if it conforms to your local protocols.  At
 		some point it will be easier to have it carry even more information about itself&mdash;enough so its
@@ -2697,12 +2646,12 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		This is inverse vandalism: the making of things because you can.  Couple this to even less sophisticated
 		buyers and you have generated an exploitation marketplace similar to that set up for teenagers.  A
 		counter to this is to generate enormous dissatisfaction with one's designs using the entire history of
-		human art as a standard and goal.  Then the trick is to decouple the dissatisfaction from self 
+		human art as a standard and goal.  Then the trick is to decouple the dissatisfaction from self
 		worth&mdash;otherwise it is either too depressing or one stops too soon with trivial results.
 		</p>
                 <a href="Images/daverobson.png" target="_blank"><img src="Images/thumbnails/daverobson.jpg" alt="Dave Robson" align="right" style="max-width: 216px"></a>
 		<p>
-		I will leave the story of early Smalltalk in 1981 when an 
+		I will leave the story of early Smalltalk in 1981 when an
 		extensive series of articles on Smalltalk-80 was published in <i>Byte</i> magazine,
 		[Byte 1981] followed by Adele's and Dave Robson's books
 		[Goldberg 1983] and the official release of the system in 1983.  Now
@@ -2726,6 +2675,6 @@ ISNEW    &raquo;    (SELF undraw. 'size &lt;- size + :. SELF draw)</i></pre>
 		</p>
                 <a href="Images/byte.png" target="_blank"><img src="Images/thumbnails/byte.jpg" alt="Byte Magazine, August 1981" style="max-width: 281px"></a>
 
-									      
+
 </body>
 </html>
