@@ -1,0 +1,52 @@
+<style type="text/css">
+  body {
+  width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  color:#444;
+  font: normal 14px/1.45 "Helvetica Neue", Arial, sans-serif;
+  }
+  h1 {
+  font-variant: small-caps;
+  margin-top:30px;
+  color:#000;
+  }
+  h2 {
+  font-family: Verdana;
+  margin-top:100px;
+  color:#000;
+  }
+  h3 {
+  color:#000;
+  margin-top:30px;
+  }
+  .copyright {
+  margin: 1em 4em 1em 4em;
+  font-size: small;
+  }
+  .toc {
+  margin: 1em 5em 1em 5em;
+  }
+  img {
+  margin-left: 10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  }
+  .rightcolumn {
+  margin: 0.5em;
+  padding: 0.5em;
+  float: right;
+  border: 1px solid #808080;
+  }
+  .dedicate {
+  margin-left: 70%;
+  }
+  div.rightcolumn {
+  width: 30%;
+  }
+  .pendery {
+  border: 1px solid #808080;
+  padding: 1em;
+  margin: 1em 4em 1em 4em;
+  }
+</style>
