@@ -1375,16 +1375,16 @@ to :robot 'pickup' :block
 <p align="center">Proposed Smalltalk-72 Syntax</p>
 <pre>
 Pair :h :t
-    hd &lt;- :h
-	hd              &raquo; h
-	tl &lt;- :t
-	tl              &raquo; t
-	isPair          &raquo; true
-	print           &raquo; '( print. SELF mprint.
-	mprint          &raquo; h print. if t isNil then ') print
-                               else if t isPair then t mprint
-                               else '* print. t print. ') print
-	length          &raquo; 1 + if t isList then t length else 0
+   hd &lt;- :h
+   hd              &raquo; h
+   tl &lt;- :t
+   tl              &raquo; t
+   isPair          &raquo; true
+   print           &raquo; '( print. SELF mprint.
+   mprint          &raquo; h print. if t isNil then ') print
+                                else if t isPair then t mprint
+                                else '&#9679; print. t print. ') print
+   length          &raquo; 1 + if t isList then t length else 0
 </pre>
 </div>
 		
